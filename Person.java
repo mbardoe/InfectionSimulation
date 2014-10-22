@@ -7,7 +7,7 @@
 * 
 */
 
-class Person  {
+public class Person  {
 	private bool isInfected;
 	private bool isAlive;
 	private bool isRecovered;

@@ -6,7 +6,7 @@
 * @date 10/21/14
 */
 
-class Population  {
+public class Population  {
 	private int populationSize;
 	private Person[] people;
 
