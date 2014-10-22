@@ -5,8 +5,8 @@ A project for 2014 APCS class that simulates using the SIR model of infections a
 
 Groups:
 
-Person:
-Virus:
-Population:
-Simulation:
+Person: Charles, Ginny, Singhei
+Virus: Caleb, Sonja, Taylor
+Population: Channy, Ben B., Yong
+Simulation: Patrick, Alex, Ben O.
 
