@@ -1,6 +1,29 @@
 
 public class Virus {
-	
+	double mortalityRate;
+	double spreadRate;
+	int lengthOfInfection;
+
+/**
+*this is a method to get the mortality rate for the virus
+**/
+public int getMortalityRate(){
+	return mortalityRate;
+	}
+/**
+*this is a method to get the spread rate for the virus
+**/
+public int getSpreadRate(){
+	return spreadRate;
+}
+/**
+*this is a method to get the duration of the virus in a person
+*
+**/
+public int getLengthofInfection(){
+	return lengthOfInfection;
+}
+
 
 	public static void main(String[] args)
 	{
