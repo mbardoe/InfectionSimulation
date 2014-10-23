@@ -20,7 +20,7 @@ public double getSpreadRate(){
 }
 /**
 *this is a method to get the duration of the virus in a person
-* @returns integer that represents the number of days the person is infected
+* @return integer that represents the number of days the person is infected
 **/
 public int getInfectiousDays(){
 	return infectiousDays;
