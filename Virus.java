@@ -1,4 +1,11 @@
 
+/**
+ * A virus class to be part of an SIR simulation which creates discrete infections. 
+ * @authors 
+ * @version 0.1
+ * @date 10.23.14
+*/
+
 public class Virus {
 	private double deathRate;
 	private double spreadRate;

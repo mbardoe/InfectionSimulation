@@ -22,11 +22,19 @@ public class Person  {
 	{
 		this.isInfected=infected;
 	}
+<<<<<<< HEAD
     public void setAlive(bool alive)
 	{
 		this.isAlive=alive;
 	}
 	public void setRecovered (bool recovered)
+=======
+	/**
+	* A setter method for the recovered status of a person.
+	* @param infected a boolean describing whether a person is recovered.
+	*/
+    public void setRecovered (bool recovered)
+>>>>>>> ad2a7c61305214583438e2f299597772fc841432
 	{
 		this.isRecovered=recovered;
 	}
