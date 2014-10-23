@@ -7,13 +7,13 @@ public class Virus {
 /**
 *this is a method to get the mortality rate for the virus
 **/
-public int getMortalityRate(){
+public double getMortalityRate(){
 	return mortalityRate;
 	}
 /**
 *this is a method to get the spread rate for the virus
 **/
-public int getSpreadRate(){
+public double getSpreadRate(){
 	return spreadRate;
 }
 /**
@@ -29,8 +29,8 @@ public int getLengthOfInfection(){
 	{
 		Virus ebola = new Virus(.20, .50, 10);
 		System.out.println(ebola.getSpreadRate()==.2);
-		System.out.println(ebola.getDeathRate()==.5);
-		System.out.println(ebola.getInfectiousDays()==10);
+		System.out.println(ebola.getMortalityRate()==.5);
+		System.out.println(ebola.getLengthOfInfection()==10);
 		System.out.println(ebola); // should return "Spread Rate: .2 Death Rate: .5 Infectious Days: 10"		
 	}
 }
