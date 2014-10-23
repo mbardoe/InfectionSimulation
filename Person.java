@@ -21,7 +21,10 @@ public class Person  {
 	{
 		this.isInfected=infected;
 	}
-
+    public void setRecovered (bool recovered)
+	{
+		this.isRecovered=recovered;
+	}
 	/**
 	* A getter method for the infection status of person.
 	* @return boolean indicating the infection state of the person.
@@ -30,6 +33,11 @@ public class Person  {
 	{
 		return isInfected;
 	}
+    public bool recovered()
+    {
+    	return isRecovered;
+    }
+
 
 	/**
 	* This main method is meant to test some of the basic implementations
