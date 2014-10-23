@@ -23,6 +23,15 @@ public class Person  {
 	}
 
 	/**
+	* A setter method for the life statuse of a person.
+	* @param alive a boolean describing whether a person is alive.
+	*/
+	public void setAlive(bool alive)
+	{
+		this.isAlive=alive;
+	}
+
+	/**
 	* A getter method for the infection status of person.
 	* @return boolean indicating the infection state of the person.
 	*/
