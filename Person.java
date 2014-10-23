@@ -16,12 +16,17 @@ public class Person  {
 	/**
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
+	* @param recovered a boolean describing whether a person is recovered.
 	*/
 	public void setInfected(bool infected)
 	{
 		this.isInfected=infected;
 	}
-    public void setRecovered (bool recovered)
+    public void setAlive(bool alive)
+	{
+		this.isAlive=alive;
+	}
+	public void setRecovered (bool recovered)
 	{
 		this.isRecovered=recovered;
 	}
@@ -29,10 +34,7 @@ public class Person  {
 	* A setter method for the life statuse of a person.
 	* @param alive a boolean describing whether a person is alive.
 	*/
-	public void setAlive(bool alive)
-	{
-		this.isAlive=alive;
-	}
+	
 
 	/**
 	* A getter method for the infection status of person.
