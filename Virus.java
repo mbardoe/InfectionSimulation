@@ -6,21 +6,21 @@ public class Virus {
 
 /**
 *this is a method to get the mortality rate for the virus
-* @return double that represents the Mortality
+* @return double that represents the rate of death
 **/ 
 public double getDeathRate(){
 	return deathRate;
 	}
 /**
 *this is a method to get the spread rate for the virus
-*
+* @return double that represents the rate of spread
 **/
 public double getSpreadRate(){
 	return spreadRate;
 }
 /**
 *this is a method to get the duration of the virus in a person
-*
+* @return integer that represents the number of days the person is infected
 **/
 public int getInfectiousDays(){
 	return infectiousDays;
