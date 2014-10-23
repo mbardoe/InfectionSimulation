@@ -4,7 +4,15 @@ public class Virus {
 	private double spreadRate;
 	private int infectiousDays;
 	
-	public Virus(double death, double spread, int days) {
+	/**
+	 * creates a new virus
+	 *  parameters are as follows-
+	 *   double rate of spreading
+	 *   double rate of death
+	 *   int number of days infected days of infection
+	*/
+	
+	public Virus(double spread, double death, int days) {
 		deathRate = death;
 		spreadRate = spread;
 		infectiousDays = days;
