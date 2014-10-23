@@ -20,7 +20,7 @@ public int getSpreadRate(){
 *this is a method to get the duration of the virus in a person
 *
 **/
-public int getLengthofInfection(){
+public int getLengthOfInfection(){
 	return lengthOfInfection;
 }
 
