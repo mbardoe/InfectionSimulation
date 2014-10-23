@@ -1,9 +1,14 @@
 
 public class Virus {
-	double deathRate;
-	double spreadRate;
-	int infectiousDays;
-// Need a constructor - DB
+	private double deathRate;
+	private double spreadRate;
+	private int infectiousDays;
+	
+	public Virus(double death, double spread, int days) {
+		deathRate = death;
+		spreadRate = spread;
+		infectiousDays = days;
+	}
 
 /**
 *this is a method to get the mortality rate for the virus
@@ -21,7 +26,7 @@ public double getSpreadRate(){
 }
 /**
 *this is a method to get the duration of the virus in a person
-* @return integer that represents the number of days the person is infected
+* @returns integer that represents the number of days the person is infected
 **/
 public int getInfectiousDays(){
 	return infectiousDays;
