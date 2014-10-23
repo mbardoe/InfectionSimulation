@@ -3,6 +3,7 @@ public class Virus {
 	double deathRate;
 	double spreadRate;
 	int infectiousDays;
+// Need a constructor - DB
 
 /**
 *this is a method to get the mortality rate for the virus
