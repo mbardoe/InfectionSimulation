@@ -11,6 +11,7 @@ public class Person  {
 	private bool isInfected;
 	private bool isAlive;
 	private bool isRecovered;
+	private Virus [] virus; 
 
 	/**
 	* A setter method for the infection status of a person.
@@ -19,6 +20,22 @@ public class Person  {
 	public void setInfected(bool infected)
 	{
 		this.isInfected=infected;
+	}
+	/**
+	* A setter method for the recovered status of a person.
+	* @param infected a boolean describing whether a person is recovered.
+	*/
+    public void setRecovered (bool recovered)
+	{
+		this.isRecovered=recovered;
+	}
+	/**
+	* A setter method for the life statuse of a person.
+	* @param alive a boolean describing whether a person is alive.
+	*/
+	public void setAlive(bool alive)
+	{
+		this.isAlive=alive;
 	}
 
 	/**
@@ -29,6 +46,15 @@ public class Person  {
 	{
 		return isInfected;
 	}
+    public bool recovered()
+    {
+    	return isRecovered;
+    }
+    public bool alive()
+    {
+    	return isAlive;
+    }
+
 
 	/**
 	* This main method is meant to test some of the basic implementations
