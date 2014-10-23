@@ -16,7 +16,7 @@ public class Simulation  {
 		//    * spread rate for virus
 		//    * duration of infection time
 		//    * mortality rate for virus
-		Scanner kb=new Scanner(System.in);
+		Scanner kb = new Scanner(System.in);
 
 		System.out.print("Please enter a population size: ");
 		int populationSize = -1;
@@ -42,7 +42,7 @@ public class Simulation  {
 		double spreadrate = -1.0;
 		while(spreadrate < 0)
 		{
-			spreadrate=kb.nextDouble();
+			spreadrate = kb.nextDouble();
 			if(spreadrate >= 0) {}
 		}
 
