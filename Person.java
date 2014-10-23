@@ -11,6 +11,7 @@ public class Person  {
 	private bool isInfected;
 	private bool isAlive;
 	private bool isRecovered;
+	private Virus [] virus; 
 
 	/**
 	* A setter method for the infection status of a person.
