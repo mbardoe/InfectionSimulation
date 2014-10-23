@@ -5,7 +5,7 @@
 */
 
 public class Simulation  {
-	
+
 
 	public static void main(String[] args)
 	{
@@ -14,7 +14,7 @@ public class Simulation  {
 		//    * Population size
 		//    * number of acquaintances
 		//    * spread rate for virus
-		//    * duration of infection time 
+		//    * duration of infection time
 		//    * mortality rate for virus
 		Scanner kb=new Scanner(System.in);
 		
@@ -54,5 +54,7 @@ public class Simulation  {
 
 		// Consider having the ability to write the results of the simulation
 		// to a file so that we can see the results in a spreadsheet.
+
+		// Testing commits
 	}
 }
