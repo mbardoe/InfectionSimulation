@@ -50,6 +50,10 @@ public class Person  {
     {
     	return isRecovered;
     }
+    public bool alive()
+    {
+    	return isAlive;
+    }
 
 
 	/**
