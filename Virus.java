@@ -1,7 +1,7 @@
 
 /**
  * A virus class to be part of an SIR simulation which creates discrete infections. 
- * @author >>>YOUR NAMES HERE<<<< 
+ * @author Sonja Eliason, Caleb Hastings, Taylor Rossini 
  * @version 0.1
  * @date 10.23.14
 */
@@ -47,6 +47,16 @@ public int getInfectiousDays(){
 	return infectiousDays;
 }
 
+/**
+ * returns parameters as a lovely string =)
+ * @return string that displays the parameters of the virus in a neat and -ahem- well formatted fashion...
+ */
+
+public String toString() {
+	return "Spread Rate- "+ebola.getSpreadRate()+" Death rate- "+ebola.getDeathRate()+" Infectious Days- "+ebola.getInfectiousDays();
+}
+
+}
 
 	public static void main(String[] args)
 	{
