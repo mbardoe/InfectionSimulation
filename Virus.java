@@ -49,7 +49,7 @@ public int getInfectiousDays(){
 
 /**
  * returns parameters as a lovely string =)
- * @return string that displays the parameters of the virus in a neat and -ahem- well formatted slate...
+ * @return string that displays the parameters of the virus in a neat and -ahem- well formatted fashion...
  */
 
 public String toString() {
