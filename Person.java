@@ -18,6 +18,10 @@ public class Person  {
 		isAlive=true;
 		isRecovered=true;
 	}
+	/**
+	* A setter method for the contacts  of a person.
+	* @param contacts an int describing the number of contacts a person has.
+	*/
 	public void setContacts(int contacts){
 		Person[] contacts= new Person[contacts];
 	}
