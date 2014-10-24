@@ -23,6 +23,7 @@ public class Population  {
  		if((infected==false)&&(alive==true)){
  			healthStatus = 0;
  		}
+
  		if(infected==true){
  			healthStatus = 1;
  		}
@@ -32,10 +33,7 @@ public class Population  {
  		if(alive==false){
  			healthStatus = 3;
  		}
- 		Person[] person = new int[2];
- 		person[0] = healthStatus;
- 		person[1] = numberAquaintances;
-
+ 		Person[i] = {healthStatus,numberAquaintances};
  	}
 
 
