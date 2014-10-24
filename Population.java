@@ -11,33 +11,19 @@ public class Population  {
  private Person[] people;
  
  
+ public void Population(int populationSize){
+    this.populationSize=populationSize;
+    people = new Person[populationSize];
+    for( int i = 0 ; i< this.populationSize ; i++)
+    {
+      people[i]=new Person();
+    }
+  }
  
  /**
  * This method adds a person to the population
  */
- public void addPerson();
- int healthStatus = 0;
- int numberAquaintances = 0;
- {
- 	for( int i = 0 ; i<= populationSize ; i++){
- 		if((infected==false)&&(alive==true)){
- 			healthStatus = 0;
- 		}
-
- 		if(infected==true){
- 			healthStatus = 1;
- 		}
- 		if(recovered==true){
- 			healthStatus = 2;
- 		}
- 		if(alive==false){
- 			healthStatus = 3;
- 		}
- 		Person[i] = {healthStatus,numberAquaintances};
- 	}
-
-
- }
+ 
  /**
  * This method creates the acquaintances for all the
  * people in the population.
