@@ -22,18 +22,23 @@ public class Person  {
 	/**
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
-	* @param alive a boolean describing whether a person is alive.
-	* @param recovered a boolean describing whether a person is recovered.
 	*/
 	public void setInfected(bool infected)
 	{
 		this.isInfected=infected;
 	}
-
+	/**
+	* A setter method for the alive status of a person.
+	* @param alive a boolean describing whether a person is alive.
+	*/
     public void setAlive(bool alive)
 	{
 		this.isAlive=alive;
 	}
+	/**
+	* A setter method for the recovered status of a person.
+	* @param recovered a boolean describing whether a person is recovered.
+	*/
 	public void setRecovered (bool recovered)
 
 	{
