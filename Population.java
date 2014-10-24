@@ -16,7 +16,30 @@ public class Population  {
  * This method adds a person to the population
  */
  public void addPerson();
+ int healthStatus = 0;
+ int numberAquaintances = 0;
+ {
+ 	for( int i = 0 ; i<= populationSize ; i++){
+ 		if((infected==false)&&(alive==true)){
+ 			healthStatus = 0;
+ 		}
+ 		if(infected==true){
+ 			healthStatus = 1;
+ 		}
+ 		if(recovered==true){
+ 			healthStatus = 2;
+ 		}
+ 		if(alive==false){
+ 			healthStatus = 3;
+ 		}
+ 		Person[] person = new int[2];
+ 		person[0] = healthStatus;
+ 		person[1] = numberAquaintances;
 
+ 	}
+
+
+ }
  /**
  * This method creates the acquaintances for all the
  * people in the population.
