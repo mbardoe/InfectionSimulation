@@ -2,6 +2,9 @@
 * The main class of a SIR Simulation with discrete aspects to it.
 * This class will run the simulation and be the "time keeper" for the
 * application.
+* @param author Patrick K.
+* @param author Alex Z.
+* @param author Ben O.
 */
 
 import java.nio.file;
@@ -26,7 +29,7 @@ public class Simulation  {
 			System.out.print("Please enter a population size: ");
 			populationSize = kb.nextInt();
 			if(populationSize >= 0) break;
-			System.out.println("Not a valid number!");
+			System.out.println("Input doesn't make sense in this context!");
 		} while(PopulationSize < 0);
 
 		int baseInfected;
@@ -34,7 +37,7 @@ public class Simulation  {
 			System.out.print("Please enter population with the virus: ");
 			baseInfected = kb.nextInt();
 			if(baseInfected < populationSize)	break;
-			System.out.println("Not a valid number!");
+			System.out.println("Input doesn't make sense in this context!");
 		} while(baseInfected > populationSize);
 
 		double spreadrate;
@@ -42,20 +45,16 @@ public class Simulation  {
 			System.out.print("Please enter the spread rate of the virus: ");
 			spreadrate = kb.nextDouble();
 			if (spreadrate >= 0) break;
-			System.out.println("Not a valid number!");
+			System.out.println("Input doesn't make sense in this context!");
 		} while(spreadrate < 0);
 
 		// this method will instantiate the Population and Virus classes
 		Population pop = new Population();
 		Virus virus = new Virus();
+
 		// Will have a loop that runs the simulation
+		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
 
-		while((pop.numberInfected()!=0)&&(pop.numberAlive()>=0))
-		{
-			
-
-
-			
 		}
 
 		// Will report out results
