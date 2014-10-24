@@ -18,31 +18,29 @@ public class Simulation  {
 		//    * mortality rate for virus
 		Scanner kb = new Scanner(System.in);
 
-		System.out.print("Please enter a population size: ");
+    // unbroke things
 		int populationSize;
-
-
 		do {
+			System.out.print("Please enter a population size: ");
 			populationSize = kb.nextInt();
-			if(populationSize >= 0)
-				break;
-		} while(PopulationSize < 0)
+			if(populationSize >= 0) break;
+			System.out.println("Not a valid number!");
+		} while(PopulationSize < 0);
 
-		System.out.print("Please enter population with the virus: ");
 		int baseInfected;
 		do {
+			System.out.print("Please enter population with the virus: ");
 			baseInfected = kb.nextInt();
-			if(baseInfected < populationSize)
-				break;
+			if(baseInfected < populationSize)	break;
 			System.out.println("Not a valid number!");
 		} while(baseInfected > populationSize);
 
-		System.out.print("Please enter the spread rate of the virus: ");
 		double spreadrate;
-
 		do {
+			System.out.print("Please enter the spread rate of the virus: ");
 			spreadrate = kb.nextDouble();
-			if(spreadrate >= 0) {}
+			if (spreadrate >= 0) break;
+			System.out.println("Not a valid number!");
 		} while(spreadrate < 0);
 
 		// this method will instantiate the Population and Virus classes

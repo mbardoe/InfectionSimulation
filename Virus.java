@@ -47,6 +47,16 @@ public int getInfectiousDays(){
 	return infectiousDays;
 }
 
+/**
+ * returns parameters as a lovely string =)
+ * @return string that displays the parameters of the virus in a neat and -ahem- well formatted fashion...
+ */
+
+public String toString() {
+	return "Spread Rate- "+ebola.getSpreadRate()+" Death rate- "+ebola.getDeathRate()+" Infectious Days- "+ebola.getInfectiousDays();
+}
+
+}
 
 	public static void main(String[] args)
 	{
