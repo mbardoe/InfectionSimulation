@@ -53,8 +53,7 @@ public int getInfectiousDays(){
  */
 
 public String toString() {
-	return "Spread Rate- "+ebola.getSpreadRate()+" Death rate- "+ebola.getDeathRate()+" Infectious Days- "+ebola.getInfectiousDays();
-}
+	return "Spread Rate- "+this.getSpreadRate()+" Death rate- "+this.getDeathRate()+" Infectious Days- "+this.getInfectiousDays();
 
 }
 
@@ -64,6 +63,6 @@ public String toString() {
 		System.out.println(ebola.getSpreadRate()==.2);
 		System.out.println(ebola.getDeathRate()==.5);
 		System.out.println(ebola.getInfectiousDays()==10);
-		System.out.println("Spread Rate- "+ebola.getSpreadRate()+" Death rate- "+ebola.getDeathRate()+" Infectious Days- "+ebola.getInfectiousDays()); // should return "Spread Rate: .2 Death Rate: .5 Infectious Days: 10"		
+		System.out.println(ebola.toString()); // should return "Spread Rate: .2 Death Rate: .5 Infectious Days: 10"		
 	}
 }
