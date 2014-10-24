@@ -50,6 +50,14 @@ public class Simulation  {
 		Virus virus = new Virus();
 		// Will have a loop that runs the simulation
 
+		while((pop.numberInfected()!=0)&&(pop.numberAlive()>=0))
+		{
+			
+
+
+			
+		}
+
 		// Will report out results
 
 		// Consider having the ability to write the results of the simulation
