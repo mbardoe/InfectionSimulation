@@ -47,7 +47,8 @@ public class Simulation  {
 		}
 
 		// this method will instantiate the Population and Virus classes
-
+		Population pop = new Population();
+		Virus virus = new Virus();
 		// Will have a loop that runs the simulation
 
 		// Will report out results
