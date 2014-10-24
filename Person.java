@@ -17,7 +17,7 @@ public class Person  {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
-		Person[] contacts= new int[contacts];
+		Person[] contacts= new Person[contacts];
 	}
 	/**
 	* A setter method for the infection status of a person.
