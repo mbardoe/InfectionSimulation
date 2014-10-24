@@ -51,6 +51,13 @@ public class Person  {
     {
     	return isAlive;
     }
+    public int getNumContacts(){
+    	return numContacts;
+    }
+
+    public Person getContacts(){
+    	return person;
+    }
 
 
 	/**
