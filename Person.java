@@ -13,11 +13,11 @@ public class Person  {
 	private bool isRecovered;
 	private Virus [] virus; 
 
-	public Person() {
+	public Person(int contacts) {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
-		int[] contacts= new int[];
+		Person[] contacts= new int[contacts];
 	}
 	/**
 	* A setter method for the infection status of a person.

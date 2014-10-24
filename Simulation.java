@@ -4,6 +4,8 @@
 * application.
 */
 
+import java.nio.file;
+
 public class Simulation  {
 
 
@@ -18,7 +20,7 @@ public class Simulation  {
 		//    * mortality rate for virus
 		Scanner kb = new Scanner(System.in);
 
-    // unbroke things
+    		// unbroke things
 		int populationSize;
 		do {
 			System.out.print("Please enter a population size: ");
@@ -60,7 +62,14 @@ public class Simulation  {
 
 		// Consider having the ability to write the results of the simulation
 		// to a file so that we can see the results in a spreadsheet.
+		Charset charset = Charset.forName("US-ASCII");
+		String output = "test output\n"; // NYI
+		try (BufferedWriter writer = Files.newBufferedWriter("postmortem.txt", charset)) {
+			writer.write(output, 0, output.length());
+		} catch (IOException x) {
+			System.out.println("Encountered an error writing output.")
+			System.err.format("IOException: %s%n", x);
+		}
 
-		// Testing commits
 	}
 }
