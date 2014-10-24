@@ -1,7 +1,7 @@
 
 /**
  * A virus class to be part of an SIR simulation which creates discrete infections. 
- * @author >>>YOUR NAMES HERE<<<< 
+ * @author Sonja Eliason, Caleb Hastings, Taylor Rossini 
  * @version 0.1
  * @date 10.23.14
 */
