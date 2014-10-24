@@ -19,32 +19,31 @@ public class Simulation  {
 		Scanner kb = new Scanner(System.in);
 
 		System.out.print("Please enter a population size: ");
-		int populationSize = -1;
+		int populationSize;
 
-		while(PopulationSize < 0)
-		{
+
+		do {
 			populationSize = kb.nextInt();
 			if(populationSize >= 0)
 				break;
-		}
+		} while(PopulationSize < 0)
 
 		System.out.print("Please enter population with the virus: ");
-		int baseInfected = 0;
-		while(baseInfected > populationSize)
-		{
+		int baseInfected;
+		do {
 			baseInfected = kb.nextInt();
 			if(baseInfected < populationSize)
 				break;
-			System.out.println("Not a valid number");
-		}
+			System.out.println("Not a valid number!");
+		} while(baseInfected > populationSize);
 
 		System.out.print("Please enter the spread rate of the virus: ");
-		double spreadrate = -1.0;
-		while(spreadrate < 0)
-		{
+		double spreadrate;
+
+		do {
 			spreadrate = kb.nextDouble();
 			if(spreadrate >= 0) {}
-		}
+		} while(spreadrate < 0);
 
 		// this method will instantiate the Population and Virus classes
 		Population pop = new Population();
