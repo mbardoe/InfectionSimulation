@@ -1,7 +1,7 @@
 
 /**
  * A virus class to be part of an SIR simulation which creates discrete infections. 
- * @authors 
+ * @author Sonja Eliason, Caleb Hastings, Taylor Rossini 
  * @version 0.1
  * @date 10.23.14
 */
@@ -14,9 +14,9 @@ public class Virus {
 	/**
 	 * creates a new virus
 	 *  parameters are as follows-
-	 *   double rate of spreading
-	 *   double rate of death
-	 *   int number of days infected days of infection
+	 *  @param spread a double rate of spreading
+	 *  @param death a double rate of death
+	 *  @param days an int number of days infected days of infection
 	*/
 	
 	public Virus(double spread, double death, int days) {
@@ -41,7 +41,7 @@ public double getSpreadRate(){
 }
 /**
 *this is a method to get the duration of the virus in a person
-* @returns integer that represents the number of days the person is infected
+* @return integer that represents the number of days the person is infected
 **/
 public int getInfectiousDays(){
 	return infectiousDays;
