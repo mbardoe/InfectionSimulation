@@ -13,6 +13,12 @@ public class Person  {
 	private bool isRecovered;
 	private Virus [] virus; 
 
+	public Person() {
+		isInfected=false;
+		isAlive=true;
+		isRecovered=true;
+		int[] contacts= new int[];
+	}
 	/**
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
