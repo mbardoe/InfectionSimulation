@@ -53,6 +53,10 @@ public class Simulation  {
 		Virus virus = new Virus();
 
 		// Will have a loop that runs the simulation
+
+		// Loop to infect the first patients.
+
+		// final loop that goes until the infection has run its course.
 		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
 
 		}

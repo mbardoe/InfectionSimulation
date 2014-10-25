@@ -1,14 +1,15 @@
 /**
 * A population class to be part of an SIR simulation with a discrete number
 * of acquaintances of each member of the population.
-* @author Matthew Bardoe, etc.
+* @author Matthew Bardoe
+* @author Ben Birney
 * @version 0.1
 * @date 10/21/14
 */
 
 public class Population  {
  private int populationSize;
- private Person[] people;
+ private Person[] people
  
  
  public void Population(int populationSize){
@@ -47,6 +48,17 @@ public class Population  {
    }
    return numInfected;
  }
+/**
+* A method to creat a string that reports out
+*   <ul>
+*   <li>Population Size</li>
+*   <li>Number Alive</li>
+*   <li>Number Infected</li>
+*   <li>Number Recovered</li>
+*   </ul>
+* @return a string that reports out the status of the population.
+*/
+ public String toString();
  
  
  public static void main(String[] args)
