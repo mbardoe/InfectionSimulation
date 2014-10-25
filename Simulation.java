@@ -83,8 +83,8 @@ public class Simulation  {
 		// Loop to infect the first patients.
 
 		// final loop that goes until the infection has run its course.
-		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
-
+		while((pop.numberInfected() != 0 ) && (pop.numberAlive() >= 0 )) {
+					
 		}
 
 		// Will report out results
