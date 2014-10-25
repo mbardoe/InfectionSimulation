@@ -8,9 +8,10 @@
 */
 
 public class Person  {
-	private bool isInfected;
-	private bool isAlive;
-	private bool isRecovered;
+	private boolean isInfected;
+	private boolean isAlive;
+	private boolean isRecovered;
+	private int contacts; 
 	private Virus[] virus; 
 
 	public Person() {
@@ -22,7 +23,7 @@ public class Person  {
 	* A setter method for the contacts  of a person.
 	* @param contacts an int describing the number of contacts a person has.
 	*/
-	public void setContacts(int contacts){
+	public void setContacts(contacts){
 		Person[] contacts= new Person[contacts];
 	}
 	/**
@@ -71,7 +72,6 @@ public class Person  {
     public int getNumContacts(){
     	return numContacts;
     }
-
     public Person getContacts(){
     	return person;
     }
