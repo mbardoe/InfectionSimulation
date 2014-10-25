@@ -12,7 +12,7 @@ public class Population  {
  private Person[] people
 
 
- public void Population(int populationSize){
+ public void Population(int populationSize, int numContacts){
     this.populationSize=populationSize;
     people = new Person[populationSize];
     for( int i = 0 ; i< this.populationSize ; i++)
@@ -49,7 +49,7 @@ public class Population  {
    return numInfected;
  }
 /**
-* A method to creat a string that reports out
+* A method to create a string that reports out
 *   <ul>
 *   <li>Population Size</li>
 *   <li>Number Alive</li>
