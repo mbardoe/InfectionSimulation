@@ -28,7 +28,7 @@ public class Population  {
  * This method creates the acquaintances for all the
  * people in the population.
  */
- private void createAquaintances();
+ private void createContacts();
 
  /**
  * This function returns the number of people that are 
@@ -53,11 +53,11 @@ public class Population  {
  {
   // Create a population of size 1000 where everyone knows
   // 5 other people.
-  Population population = new Population(1000,5);
-  Person larry = population.getPerson(300);
+  Population population = new Population(100,5);
+  Person larry = population.getPerson(30);
   System.out.println(larry);
-  System.out.println(population.numberInfected);
-  System.out.println(population.numberAlive);
-  System.out.println(population.numberRecovered);
+  System.out.println(population.numberInfected());
+  System.out.println(population.numberAlive());
+  System.out.println(population.numberRecovered());
  }
 }
