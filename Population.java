@@ -12,7 +12,7 @@ public class Population  {
  private Person[] people
  
  
- public void Population(int populationSize, int numInfected){
+ public void Population(int populationSize, int numContacts){
     this.populationSize=populationSize;
     people = new Person[populationSize];
     for( int i = 0 ; i< this.populationSize ; i++)
