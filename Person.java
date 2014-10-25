@@ -87,7 +87,9 @@ public class Person  {
     public Person getContacts(){
     	return person;
     }
-    public int getPopulationSize();
+    public int getPopulationSize(){
+    	return populationSize;
+    }
     public void spreadVirus()
     {
     	//Check if the person is infected.

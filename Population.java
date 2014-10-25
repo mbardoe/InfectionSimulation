@@ -1,4 +1,4 @@
- /**
+/**
 * A population class to be part of an SIR simulation with a discrete number
 * of acquaintances of each member of the population.
 * @author Matthew Bardoe
@@ -9,9 +9,10 @@
 
 public class Population  {
  private int populationSize;
- private Person[] people
-
-
+ private Person[] people;
+ private int numContacts;
+ 
+ 
  public void Population(int populationSize, int numContacts){
     this.populationSize=populationSize;
     people = new Person[populationSize];
@@ -20,19 +21,23 @@ public class Population  {
       people[i]=new Person();
     }
   }
-
+ 
  /**
  * This method adds a person to the population
  */
-
+ 
  /**
  * This method creates the acquaintances for all the
  * people in the population.
  */
- private void createContacts();
+ private void createContacts(int numContacts);
+   for (int i = 0; i<populationSize; i++)
+   {
+      if people[i] 
+   }
 
  /**
- * This function returns the number of people that are
+ * This function returns the number of people that are 
  * infected in the population.
  * @return int the number of infected people in the population.
  */
@@ -59,8 +64,8 @@ public class Population  {
 * @return a string that reports out the status of the population.
 */
  public String toString();
-       return "Population Size - " + this.populationSize + "| Number Infected - " + this.numberInfected + "| Number Alive - " + this.numberAlive + "| Number Recovered - " + this.numberRecovered;
-
+       return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
+ 
  public static void main(String[] args)
  {
   // Create a population of size 1000 where everyone knows
