@@ -3,6 +3,7 @@
 * of acquaintances of each member of the population.
 * @author Matthew Bardoe
 * @author Ben Birney
+* @author Yonghyun Lee
 * @version 0.1
 * @date 10/21/14
 */
@@ -12,7 +13,11 @@ public class Population  {
  private Person[] people;
  private int numContacts;
  
- 
+ /**
+ * A constructor method for the Population class 
+ * @param populationSize an int that indicates the size of the population
+ * @param numContacts an int that indicates the number of contacts each member of the population will have.
+ */
  public void Population(int populationSize, int numContacts){
     this.populationSize=populationSize;
     people = new Person[populationSize];
@@ -20,11 +25,10 @@ public class Population  {
     {
       people[i]=new Person();
     }
+    this.numContacts=numContacts
   }
  
- /**
- * This method adds a person to the population
- */
+ 
  
  /**
  * This method creates the acquaintances for all the
@@ -36,6 +40,7 @@ public class Population  {
      person[i]
        for (int i = 0; i<numContacts; i++)
       {
+      	// randomly generate an integer from 
         Math.random(populationSize)== addContact;
        
       }
@@ -68,7 +73,7 @@ public class Population  {
 * @return a string that reports out the status of the population.
 */
  public String toString();
-       return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
+              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
  
  public static void main(String[] args)
  {
@@ -77,6 +82,6 @@ public class Population  {
   Population population = new Population(100,5);
   Person larry = population.getPerson(30);
   System.out.println(larry);
-  System.out.println(population.toString());
+  System.out.println(population);
  }
 }
