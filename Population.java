@@ -25,7 +25,7 @@ public class Population  {
     {
       people[i]=new Person();
     }
-    this.numContacts=numContacts
+    this.numContacts=numContacts;
   }
  
  
@@ -34,18 +34,22 @@ public class Population  {
  * This method creates the acquaintances for all the
  * people in the population.
  */
- private void createContacts(int numContacts);
+ private void createContacts(int numContacts)
+ {
+ 	Person currentPerson, friend;
+ 	int friendIndex;
    for (int i = 0; i<populationSize; i++)
    {
-     person[i]
-       for (int i = 0; i<numContacts; i++)
+     currentPerson = people[i];
+       for (int j = 0; j<numContacts; j++)
       {
       	// randomly generate an integer from 
-        Math.random(populationSize)== addContact;
+        //friendIndex = Math.random();
+        //== addContact;
        
       }
    }
-
+}
  /**
  * This function returns the number of people that are 
  * infected in the population.
@@ -72,9 +76,10 @@ public class Population  {
 *   </ul>
 * @return a string that reports out the status of the population.
 */
- public String toString();
+ public String toString()
+ {
               return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
- 
+ }
  public static void main(String[] args)
  {
   // Create a population of size 1000 where everyone knows
