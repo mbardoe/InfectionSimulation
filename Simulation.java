@@ -18,6 +18,9 @@ public class Simulation  {
 	private String report;
 	private int tick;
 
+	/**
+	 * Configure the simulation
+	 */
 	public void configure() {
 		// configure pop and virus here
 		Scanner kb = new Scanner(System.in);
@@ -55,7 +58,9 @@ public class Simulation  {
 			System.out.println("Input doesn't make sense in this context!")
 		} while(duration < 0);
 	}
-
+	/**
+	 * Run through one day of simulating
+	 */
 	public void tick() {
 		do{
 			tick = pop.getInfectiousDays();
@@ -64,16 +69,23 @@ public class Simulation  {
 		}
 		// single tick of the simulation
 	}
-
+	/**
+	 * Generate a report of the simulation's current state
+	 */
 	public String generateReport() {
 		numberSick = pop.getNumberInfected();
 		popsize = pop.getPopulationSize();
 		percentageInfected = (double)numberSick/(double)popsize;
-		report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected; 
+		report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected;
 		return report;
 		// return a string of the current population's state
 	}
 
+	/**
+	 * Write an arbitrary string to an arbitrary file
+	 * @param str String to write
+	 * @param filename File to write to
+	 */
 	public void writeToFile(String str, String filename) {
 		// write out
 		Charset charset = Charset.forName("US-ASCII");
@@ -86,6 +98,9 @@ public class Simulation  {
 		}
 	}
 
+	/**
+	 * Application entry point
+	 */
 	public static void main(String[] args)
 	{
 		// Use a scanner to get the information necessary to start the sim
