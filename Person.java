@@ -8,23 +8,35 @@
 */
 
 public class Person  {
-	private boolean isInfected;
-	private boolean isAlive;
-	private boolean isRecovered;
-	private int contacts; 
-	private Virus[] virus; 
 
-	public Person() {
+	private bool isInfected;
+	private bool isAlive;
+	private bool isRecovered;
+	private Virus virus; 
+	private int daysInfected;
+	private Person[] contacts;
+
+	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
+		// instantiate contacts
+		contacts= new Person[numContacts];
 	}
 	/**
 	* A setter method for the contacts  of a person.
-	* @param contacts an int describing the number of contacts a person has.
+	* @param newContact a contact the person has.
 	*/
-	public void setContacts(contacts){
-		Person[] contacts= new Person[contacts];
+
+	public void addContact(Person newContact){
+		for (int i=0; i<contacts.length; i++)
+		{
+			if (contacts[i]==null)
+			{
+				contacts[i]=newContact;
+			}
+		}
+
 	}
 	/**
 	* A setter method for the infection status of a person.
@@ -76,7 +88,16 @@ public class Person  {
     	return person;
     }
     public int getPopulationSize();
-    public void spreadVirus();
+    public void spreadVirus()
+    {
+    	//Check if the person is infected.
+    	//Loop through the contacts.
+    	//Decide if a contact is susceptible by whether they are infected or not.
+    	//Compare a random number to the spread rate.
+    	//If person is infected track the number of days they have been infected.
+    	//If infected for enough days then compare random number to death rate to see if they are alive.
+    	//If infected for enough days then not infected anymore.
+    }
     
 
 
