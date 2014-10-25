@@ -75,6 +75,9 @@ public class Person  {
     public Person getContacts(){
     	return person;
     }
+    public int getPopulationSize();
+    public void spreadVirus();
+    
 
 
 	/**
