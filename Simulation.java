@@ -12,6 +12,10 @@ import java.nio.file;
 public class Simulation  {
 	private Population pop;
 	private Virus virus;
+	private int numberSick;
+	private int popsize;
+	private double percentageInfected;
+	private String report;
 
 	public void configure() {
 		// configure pop and virus here
@@ -41,6 +45,14 @@ public class Simulation  {
 			if (spreadrate >= 0) break;
 			System.out.println("Input doesn't make sense in this context!");
 		} while(spreadrate < 0);
+
+		int duration;
+		do{
+			System.out.print("Please enter the duration of the virus: ");
+			duration = kb.nextInt;
+			if (duration>=0) break;
+			System.out.println("Input doesn't make sense in this context!")
+		} while(duration < 0);
 	}
 
 	public void tick() {
@@ -48,6 +60,11 @@ public class Simulation  {
 	}
 
 	public String generateReport() {
+		numberSick = pop.getNumberInfected();
+		popsize = pop.getPopulationSize();
+		percentageInfected = (double)numberSick/(double)popsize;
+		report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected; 
+		return report;
 		// return a string of the current population's state
 	}
 
