@@ -59,7 +59,7 @@ public class Population  {
 * @return a string that reports out the status of the population.
 */
  public String toString();
- 
+       return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
  
  public static void main(String[] args)
  {
