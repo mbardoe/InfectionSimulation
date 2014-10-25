@@ -3,13 +3,15 @@
 * of acquaintances of each member of the population.
 * @author Matthew Bardoe
 * @author Ben Birney
+* @author Yong
+* @author Channy
 * @version 0.1
 * @date 10/21/14
 */
 
 public class Population  {
  private int populationSize;
- private Person[] people
+ private Person[] people;
  
  
  public void Population(int populationSize){
@@ -29,7 +31,10 @@ public class Population  {
  * This method creates the acquaintances for all the
  * people in the population.
  */
- private void createContacts();
+ private void createContacts()
+ {
+   
+ }
 
  /**
  * This function returns the number of people that are 
@@ -49,7 +54,7 @@ public class Population  {
    return numInfected;
  }
 /**
-* A method to creat a string that reports out
+* A method to create a string that reports out
 *   <ul>
 *   <li>Population Size</li>
 *   <li>Number Alive</li>
@@ -59,6 +64,10 @@ public class Population  {
 * @return a string that reports out the status of the population.
 */
  public String toString();
+ {
+   return " population size: "+this.populationsize+"/n number alive: "+this.numberAlive() +
+    "/n number Infected" + this.numberInfected() + "/n numberRecovered "+ this.numberRecovered();
+ }
  
  
  public static void main(String[] args)
@@ -71,5 +80,6 @@ public class Population  {
   System.out.println(population.numberInfected());
   System.out.println(population.numberAlive());
   System.out.println(population.numberRecovered());
+  System.out.println(population.toString());
  }
 }
