@@ -33,7 +33,12 @@ public class Population  {
  private void createContacts(int numContacts);
    for (int i = 0; i<populationSize; i++)
    {
-      if people[i] 
+     person[i]
+       for (int i = 0; i<numContacts; i++)
+      {
+        Math.random(populationSize)== addContact;
+       
+      }
    }
 
  /**
@@ -46,7 +51,6 @@ public class Population  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
    {
-     if ( people[i].infected())
      {
        numInfected++;
      }
