@@ -2,15 +2,32 @@
 * The main class of a SIR Simulation with discrete aspects to it.
 * This class will run the simulation and be the "time keeper" for the
 * application.
-* @param author Patrick K.
-* @param author Alex Z.
-* @param author Ben O.
+* @author Patrick K.
+* @author Alex Z.
+* @author Ben O.
 */
 
 import java.nio.file;
 
 public class Simulation  {
+	private Population pop;
+	private Virus virus;
 
+	public void configure() {
+		// configure pop and virus here
+	}
+
+	public void tick() {
+		// single tick of the simulation
+	}
+
+	public String generateReport() {
+		// return a string of the current population's state
+	}
+
+	public void writeToFile(String str, String filename) {
+		// write out
+	}
 
 	public static void main(String[] args)
 	{
