@@ -59,7 +59,7 @@ public class Population  {
 * @return a string that reports out the status of the population.
 */
  public String toString();
- 
+       return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
  
  public static void main(String[] args)
  {
@@ -68,8 +68,6 @@ public class Population  {
   Population population = new Population(100,5);
   Person larry = population.getPerson(30);
   System.out.println(larry);
-  System.out.println(population.numberInfected());
-  System.out.println(population.numberAlive());
-  System.out.println(population.numberRecovered());
+  System.out.println(population.toString());
  }
 }
