@@ -16,6 +16,7 @@ public class Simulation  {
 	private int popsize;
 	private double percentageInfected;
 	private String report;
+	private int tick;
 
 	public void configure() {
 		// configure pop and virus here
@@ -56,6 +57,11 @@ public class Simulation  {
 	}
 
 	public void tick() {
+		do{
+			tick = pop.getInfectiousDays();
+			System.out.println("Duration so far: " + pop.getInfectiousDays());
+			tick++;
+		}
 		// single tick of the simulation
 	}
 
