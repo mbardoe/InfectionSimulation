@@ -15,32 +15,9 @@ public class Simulation  {
 
 	public void configure() {
 		// configure pop and virus here
-	}
-
-	public void tick() {
-		// single tick of the simulation
-	}
-
-	public String generateReport() {
-		// return a string of the current population's state
-	}
-
-	public void writeToFile(String str, String filename) {
-		// write out
-	}
-
-	public static void main(String[] args)
-	{
-		// Use a scanner to get the information necessary to start the sim
-		// We will need:
-		//    * Population size
-		//    * number of acquaintances
-		//    * spread rate for virus
-		//    * duration of infection time
-		//    * mortality rate for virus
 		Scanner kb = new Scanner(System.in);
 
-    		// unbroke things
+			// unbroke things
 		int populationSize;
 		do {
 			System.out.print("Please enter a population size: ");
@@ -64,6 +41,38 @@ public class Simulation  {
 			if (spreadrate >= 0) break;
 			System.out.println("Input doesn't make sense in this context!");
 		} while(spreadrate < 0);
+	}
+
+	public void tick() {
+		// single tick of the simulation
+	}
+
+	public String generateReport() {
+		// return a string of the current population's state
+	}
+
+	public void writeToFile(String str, String filename) {
+		// write out
+		Charset charset = Charset.forName("US-ASCII");
+		String output = "test output\n"; // NYI
+		try (BufferedWriter writer = Files.newBufferedWriter("postmortem.txt", charset)) {
+			writer.write(output, 0, output.length());
+		} catch (IOException x) {
+			System.out.println("Encountered an error writing output.")
+			System.err.format("IOException: %s%n", x);
+		}
+	}
+
+	public static void main(String[] args)
+	{
+		// Use a scanner to get the information necessary to start the sim
+		// We will need:
+		//    * Population size
+		//    * number of acquaintances
+		//    * spread rate for virus
+		//    * duration of infection time
+		//    * mortality rate for virus
+
 
 		// this method will instantiate the Population and Virus classes
 		Population pop = new Population();
@@ -82,14 +91,7 @@ public class Simulation  {
 
 		// Consider having the ability to write the results of the simulation
 		// to a file so that we can see the results in a spreadsheet.
-		Charset charset = Charset.forName("US-ASCII");
-		String output = "test output\n"; // NYI
-		try (BufferedWriter writer = Files.newBufferedWriter("postmortem.txt", charset)) {
-			writer.write(output, 0, output.length());
-		} catch (IOException x) {
-			System.out.println("Encountered an error writing output.")
-			System.err.format("IOException: %s%n", x);
-		}
+
 
 	}
 }
