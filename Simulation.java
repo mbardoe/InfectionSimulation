@@ -12,6 +12,10 @@ import java.nio.file;
 public class Simulation  {
 	private Population pop;
 	private Virus virus;
+	private int numberSick;
+	private int popsize;
+	private double percentageInfected;
+	private String report;
 
 	public void configure() {
 		// configure pop and virus here
@@ -30,7 +34,7 @@ public class Simulation  {
 		do {
 			System.out.print("Please enter population with the virus: ");
 			baseInfected = kb.nextInt();
-			if(baseInfected < populationSize)	break;
+			if(baseInfected < populationSize) break;
 			System.out.println("Input doesn't make sense in this context!");
 		} while(baseInfected > populationSize);
 
@@ -41,6 +45,14 @@ public class Simulation  {
 			if (spreadrate >= 0) break;
 			System.out.println("Input doesn't make sense in this context!");
 		} while(spreadrate < 0);
+
+		int duration;
+		do{
+			System.out.print("Please enter the duration of the virus: ");
+			duration = kb.nextInt;
+			if (duration>=0) break;
+			System.out.println("Input doesn't make sense in this context!")
+		} while(duration < 0);
 	}
 
 	public void tick() {
@@ -48,6 +60,11 @@ public class Simulation  {
 	}
 
 	public String generateReport() {
+		numberSick = pop.getNumberInfected();
+		popsize = pop.getPopulationSize();
+		percentageInfected = (double)numberSick/(double)popsize;
+		report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected; 
+		return report;
 		// return a string of the current population's state
 	}
 
@@ -75,22 +92,19 @@ public class Simulation  {
 
 
 		// this method will instantiate the Population and Virus classes
-		Population pop = new Population();
-		Virus virus = new Virus();
+		Simulation sim = new Simulation();
 
-		// Will have a loop that runs the simulation
-
-		// Loop to infect the first patients.
-
+		sim.configure();
+		String out = "";
 		// final loop that goes until the infection has run its course.
-		while((pop.numberInfected() != 0 ) && (pop.numberAlive() >= 0 )) {
-					
+		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
+			sim.tick();
+			System.out.println(sim.generateReport());
+			out += sim.generateReport();
 		}
 
 		// Will report out results
-
-		// Consider having the ability to write the results of the simulation
-		// to a file so that we can see the results in a spreadsheet.
+		sim.writeToFile(out, "output.txt");
 
 
 	}
