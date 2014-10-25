@@ -1,4 +1,4 @@
-/**
+ /**
 * A population class to be part of an SIR simulation with a discrete number
 * of acquaintances of each member of the population.
 * @author Matthew Bardoe
@@ -10,9 +10,9 @@
 public class Population  {
  private int populationSize;
  private Person[] people
- 
- 
- public void Population(int populationSize){
+
+
+ public void Population(int populationSize, int numContacts){
     this.populationSize=populationSize;
     people = new Person[populationSize];
     for( int i = 0 ; i< this.populationSize ; i++)
@@ -20,11 +20,11 @@ public class Population  {
       people[i]=new Person();
     }
   }
- 
+
  /**
  * This method adds a person to the population
  */
- 
+
  /**
  * This method creates the acquaintances for all the
  * people in the population.
@@ -32,7 +32,7 @@ public class Population  {
  private void createContacts();
 
  /**
- * This function returns the number of people that are 
+ * This function returns the number of people that are
  * infected in the population.
  * @return int the number of infected people in the population.
  */
@@ -49,7 +49,7 @@ public class Population  {
    return numInfected;
  }
 /**
-* A method to creat a string that reports out
+* A method to create a string that reports out
 *   <ul>
 *   <li>Population Size</li>
 *   <li>Number Alive</li>
@@ -59,8 +59,8 @@ public class Population  {
 * @return a string that reports out the status of the population.
 */
  public String toString();
- 
- 
+       return "Population Size - " + this.populationSize + "| Number Infected - " + this.numberInfected + "| Number Alive - " + this.numberAlive + "| Number Recovered - " + this.numberRecovered;
+
  public static void main(String[] args)
  {
   // Create a population of size 1000 where everyone knows
@@ -68,8 +68,6 @@ public class Population  {
   Population population = new Population(100,5);
   Person larry = population.getPerson(30);
   System.out.println(larry);
-  System.out.println(population.numberInfected());
-  System.out.println(population.numberAlive());
-  System.out.println(population.numberRecovered());
+  System.out.println(population.toString());
  }
 }
