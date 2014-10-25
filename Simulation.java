@@ -30,7 +30,7 @@ public class Simulation  {
 		do {
 			System.out.print("Please enter population with the virus: ");
 			baseInfected = kb.nextInt();
-			if(baseInfected < populationSize)	break;
+			if(baseInfected < populationSize) break;
 			System.out.println("Input doesn't make sense in this context!");
 		} while(baseInfected > populationSize);
 
@@ -75,22 +75,19 @@ public class Simulation  {
 
 
 		// this method will instantiate the Population and Virus classes
-		Population pop = new Population();
-		Virus virus = new Virus();
+		Simulation sim = new Simulation();
 
-		// Will have a loop that runs the simulation
-
-		// Loop to infect the first patients.
-
+		sim.configure();
+		String out = "";
 		// final loop that goes until the infection has run its course.
 		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
-
+			sim.tick();
+			System.out.println(sim.generateReport());
+			out += sim.generateReport();
 		}
 
 		// Will report out results
-
-		// Consider having the ability to write the results of the simulation
-		// to a file so that we can see the results in a spreadsheet.
+		sim.writeToFile(out, "output.txt");
 
 
 	}
