@@ -85,15 +85,17 @@ public class Person  {
     	return numContacts;
     }
     public Person getContacts(){
-    	return person;
-    }
-    public int getPopulationSize(){
-    	return populationSize;
+    	return contacts;
     }
     public void spreadVirus()
     {
-    	//Check if the person is infected.
-    	//Loop through the contacts.
+    	if (isInfected==true)
+    	{
+    		for (int i=0; i<contacts.length; i++)
+    		{
+    			contact[i] 
+    		}
+    	
     	//Decide if a contact is susceptible by whether they are infected or not.
     	//Compare a random number to the spread rate.
     	//If person is infected track the number of days they have been infected.
