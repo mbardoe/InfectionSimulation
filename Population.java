@@ -18,12 +18,12 @@ public class Population  {
  * @param populationSize an int that indicates the size of the population
  * @param numContacts an int that indicates the number of contacts each member of the population will have.
  */
- public void Population(int populationSize, int numContacts){
+ public Population(int populationSize, int numContacts){
     this.populationSize=populationSize;
     people = new Person[populationSize];
     for( int i = 0 ; i< this.populationSize ; i++)
     {
-      people[i]=new Person();
+      people[i]=new Person(numContacts);
     }
     this.numContacts=numContacts;
   }
@@ -78,7 +78,7 @@ public class Population  {
 */
  public String toString()
  {
-              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected + "Number Alive -" + this.numberAlive + "Number Recovered -" + this.numberRecovered;
+              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected() + "Number Alive -" + this.numberAlive() + "Number Recovered -" + this.numberRecovered();
  }
  public static void main(String[] args)
  {
