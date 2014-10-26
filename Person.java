@@ -107,12 +107,8 @@ public class Person  {
     		{
     			if (contact[i].susceptible==true)
     			{
-
+    				Math.random
     			} 
-    			else
-    			{
-    				
-    			}
     		}
     	
     	//Decide if a contact is susceptible by whether they are infected or not.
