@@ -94,7 +94,7 @@ public class Person  {
     		{
     			if (contact[i].susceptible==true)
     			{
-    				(Math.floor(Math.random() * 100.0))*(spreadrate)
+    				(Math.floor(Math.random() * 100.0))*(spreadrate)=//some number
     				if (isInfected==true)
     				{
     					(Math.floor(Math.))
