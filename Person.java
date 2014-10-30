@@ -13,7 +13,7 @@ public class Person  {
 	private boolean isRecovered;
 	private Virus[] virus; 
 	private Person[] contacts;
-
+	private int numContacts;
 	public Person() {
 		isInfected=false;
 		isAlive=true;
@@ -24,6 +24,7 @@ public class Person  {
 	* @param contacts an int describing the number of contacts a person has.
 	*/
 	public void setContacts(int contacts){
+		numContacts=contacts; 
 		Person[] contacts= new Person[contacts];
 	}
 	/**
@@ -72,12 +73,13 @@ public class Person  {
     {
     	return isAlive;
     }
-    public int getNumContacts(){
+    public int getNumContacts()
+    {
     	return numContacts;
     }
 
-    public Person getContacts(){
-
+    public Person getContacts()
+    {
     	return contacts;
     }
     public void addContacts()
@@ -86,7 +88,7 @@ public class Person  {
     	{
     		if (contact[i]==null)
     		{
-    			
+
     		}
     	}
     }
