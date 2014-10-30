@@ -28,7 +28,7 @@ public class Person  {
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
 	*/
-	public void setInfected(bool infected)
+	public void setInfected(boolean infected)
 	{
 		this.isInfected=infected;
 	}
@@ -36,7 +36,7 @@ public class Person  {
 	* A setter method for the alive status of a person.
 	* @param alive a boolean describing whether a person is alive.
 	*/
-    public void setAlive(bool alive)
+    public void setAlive(boolean alive)
 	{
 		this.isAlive=alive;
 	}
@@ -44,7 +44,7 @@ public class Person  {
 	* A setter method for the recovered status of a person.
 	* @param recovered a boolean describing whether a person is recovered.
 	*/
-	public void setRecovered (bool recovered)
+	public void setRecovered (boolean recovered)
 
 	{
 		this.isRecovered=recovered;
