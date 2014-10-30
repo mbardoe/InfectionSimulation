@@ -8,10 +8,11 @@
 */
 
 public class Person  {
-	private bool isInfected;
-	private bool isAlive;
-	private bool isRecovered;
+	private boolean isInfected;
+	private boolean isAlive;
+	private boolean isRecovered;
 	private Virus[] virus; 
+	private Person[] contacts;
 
 	public Person() {
 		isInfected=false;
@@ -79,6 +80,17 @@ public class Person  {
 
     	return contacts;
     }
+    public void addContacts()
+    {
+    	for (int i =o; i<contacts.lenght; i++)
+    	{
+    		if (contact[i]==null)
+    		{
+    			
+    		}
+    	}
+    }
+
     public void spreadVirus()
     {
     	if (isInfected==true)
