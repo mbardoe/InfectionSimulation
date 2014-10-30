@@ -12,23 +12,24 @@ public class Person  {
 	private boolean isAlive;
 	private boolean isRecovered;
 	private Virus[] virus; 
+<<<<<<< HEAD
 	private Person[] contacts;
     private int numContacts;
 
+=======
+>>>>>>> 061528a7f9ae4c0567aa8a7b47df397fba4b83af
 	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
+<<<<<<< HEAD
         contacts=new Person[numContacts];
         this.numContacts=numContacts;
+=======
+	
+>>>>>>> 061528a7f9ae4c0567aa8a7b47df397fba4b83af
 	}
-	/**
-	* A setter method for the contacts  of a person.
-	* @param contacts an int describing the number of contacts a person has.
-	*/
-	public void setContacts(int contacts){
-		Person[] contacts= new Person[contacts];
-	}
+	
 	/**
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
@@ -75,12 +76,13 @@ public class Person  {
     {
     	return isAlive;
     }
-    public int getNumContacts(){
+    public int getNumContacts()
+    {
     	return numContacts;
     }
 
-    public Person getContacts(){
-
+    public Person getContacts()
+    {
     	return contacts;
     }
     public void addContact(Person friend)
@@ -89,8 +91,13 @@ public class Person  {
     	{
     		if (contact[i]==null)
     		{
+<<<<<<< HEAD
     			contacts[i]=friend;
                 break;
+=======
+    			contact[i]=friend;
+    			break; 
+>>>>>>> 061528a7f9ae4c0567aa8a7b47df397fba4b83af
     		}
     	}
     }
@@ -103,11 +110,15 @@ public class Person  {
     		{
     			if (contact[i].susceptible==true)
     			{
-    				(Math.floor(Math.random() * 100.0))*(spreadrate)
-    				if (isInfected==true)
+    				(Math.floor(Math.random() * 100.0))*(spreadrate)=//some number
+    				if (/*some number*/<)
     				{
-
+    					if (isInfected==true)
+    				{
+    					(Math.floor(Math.))
     				}
+    				}
+    				
     			} 
 
     		}
