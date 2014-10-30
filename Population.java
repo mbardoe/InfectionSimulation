@@ -48,9 +48,7 @@ public class Population  {
          int friendIndex = (int)Math.random()*populationSize;
          Person friend = people[friendIndex];
          currentPerson.addContact(friend);
-      	// randomly generate an integer from 
-        //friendIndex = Math.random();
-        //== addContact;
+    
        
       }
    }
