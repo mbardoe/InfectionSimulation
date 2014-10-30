@@ -98,9 +98,9 @@ public class Person  {
     				if (/*some number*/<)
     				{
     					if (isInfected==true)
-    				{
+    					{
     					(Math.floor(Math.))
-    				}
+    					}
     				}
     				
     			} 
