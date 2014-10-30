@@ -8,42 +8,28 @@
 */
 
 public class Person  {
+	private bool isInfected;
+	private bool isAlive;
+	private bool isRecovered;
+	private Virus[] virus; 
 
-	private boolean isInfected;
-	private boolean isAlive;
-	private boolean isRecovered;
-	private Virus virus; 
-	private int daysInfected;
-	private Person[] contacts;
-	private boolean susceptible;
-
-	public Person(int numContacts) {
+	public Person() {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
-		// instantiate contacts
-		contacts= new Person[numContacts];
 	}
 	/**
 	* A setter method for the contacts  of a person.
-	* @param newContact a contact the person has.
+	* @param contacts an int describing the number of contacts a person has.
 	*/
-
-	public void addContact(Person newContact){
-		for (int i=0; i<contacts.length; i++)
-		{
-			if (contacts[i]==null)
-			{
-				contacts[i]=newContact;
-			}
-		}
-
+	public void setContacts(int contacts){
+		Person[] contacts= new Person[contacts];
 	}
 	/**
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
 	*/
-	public void setInfected(boolean infected)
+	public void setInfected(bool infected)
 	{
 		this.isInfected=infected;
 	}
@@ -51,7 +37,7 @@ public class Person  {
 	* A setter method for the alive status of a person.
 	* @param alive a boolean describing whether a person is alive.
 	*/
-    public void setAlive(boolean alive)
+    public void setAlive(bool alive)
 	{
 		this.isAlive=alive;
 	}
@@ -59,7 +45,7 @@ public class Person  {
 	* A setter method for the recovered status of a person.
 	* @param recovered a boolean describing whether a person is recovered.
 	*/
-	public void setRecovered (boolean recovered)
+	public void setRecovered (bool recovered)
 
 	{
 		this.isRecovered=recovered;
@@ -73,33 +59,24 @@ public class Person  {
 	* A getter method for the infection status of person.
 	* @return boolean indicating the infection state of the person.
 	*/
-	public boolean infected()
+	public bool infected()
 	{
 		return isInfected;
 	}
-    public boolean recovered()
+    public bool recovered()
     {
     	return isRecovered;
     }
-    public boolean alive()
+    public bool alive()
     {
     	return isAlive;
     }
-    public boolean susceptible ()
-	{
-		if (isAlive==true && isInfected==false)
-		{
-			susceptible==true;
-		}
-		else
-		{
-			susceptible==false;
-		}
-	}
     public int getNumContacts(){
     	return numContacts;
     }
+
     public Person getContacts(){
+
     	return contacts;
     }
     public void spreadVirus()
@@ -124,8 +101,6 @@ public class Person  {
     	//If person is infected track the number of days they have been infected.
     	//If infected for enough days then compare random number to death rate to see if they are alive.
     	//If infected for enough days then not infected anymore.
-    }
-    
 
 
 	/**
