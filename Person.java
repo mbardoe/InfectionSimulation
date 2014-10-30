@@ -9,12 +9,13 @@
 
 public class Person  {
 
-	private bool isInfected;
-	private bool isAlive;
-	private bool isRecovered;
+	private boolean isInfected;
+	private boolean isAlive;
+	private boolean isRecovered;
 	private Virus virus; 
 	private int daysInfected;
 	private Person[] contacts;
+	private boolean susceptible;
 
 	public Person(int numContacts) {
 		isInfected=false;
@@ -42,7 +43,7 @@ public class Person  {
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
 	*/
-	public void setInfected(bool infected)
+	public void setInfected(boolean infected)
 	{
 		this.isInfected=infected;
 	}
@@ -50,7 +51,7 @@ public class Person  {
 	* A setter method for the alive status of a person.
 	* @param alive a boolean describing whether a person is alive.
 	*/
-    public void setAlive(bool alive)
+    public void setAlive(boolean alive)
 	{
 		this.isAlive=alive;
 	}
@@ -58,7 +59,7 @@ public class Person  {
 	* A setter method for the recovered status of a person.
 	* @param recovered a boolean describing whether a person is recovered.
 	*/
-	public void setRecovered (bool recovered)
+	public void setRecovered (boolean recovered)
 
 	{
 		this.isRecovered=recovered;
@@ -69,31 +70,47 @@ public class Person  {
 	* A getter method for the infection status of person.
 	* @return boolean indicating the infection state of the person.
 	*/
-	public bool infected()
+	public boolean infected()
 	{
 		return isInfected;
 	}
-    public bool recovered()
+    public boolean recovered()
     {
     	return isRecovered;
     }
-    public bool alive()
+    public boolean alive()
     {
     	return isAlive;
     }
+    public boolean susceptible ()
+	{
+		if (isAlive==true && isInfected==false)
+		{
+			susceptible==true;
+		}
+		else
+		{
+			susceptible==false;
+		}
+	}
     public int getNumContacts(){
     	return numContacts;
     }
     public Person getContacts(){
-    	return person;
-    }
-    public int getPopulationSize(){
-    	return populationSize;
+    	return contacts;
     }
     public void spreadVirus()
     {
-    	//Check if the person is infected.
-    	//Loop through the contacts.
+    	if (isInfected==true)
+    	{
+    		for (int i=0; i<contacts.length; i++)
+    		{
+    			if (contact[i].susceptible==true)
+    			{
+    				Math.random
+    			} 
+    		}
+    	
     	//Decide if a contact is susceptible by whether they are infected or not.
     	//Compare a random number to the spread rate.
     	//If person is infected track the number of days they have been infected.
