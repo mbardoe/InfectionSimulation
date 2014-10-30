@@ -13,11 +13,14 @@ public class Person  {
 	private boolean isRecovered;
 	private Virus[] virus; 
 	private Person[] contacts;
+    private int numContacts;
 
-	public Person() {
+	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
+        contacts=new Person[numContacts];
+        this.numContacts=numContacts;
 	}
 	/**
 	* A setter method for the contacts  of a person.
@@ -80,13 +83,14 @@ public class Person  {
 
     	return contacts;
     }
-    public void addContacts()
+    public void addContact(Person friend)
     {
-    	for (int i =o; i<contacts.lenght; i++)
+    	for (int i =0; i<contacts.length; i++)
     	{
     		if (contact[i]==null)
     		{
-    			
+    			contacts[i]=friend;
+                break;
     		}
     	}
     }
