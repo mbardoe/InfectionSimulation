@@ -48,7 +48,9 @@ public class Population  {
          int friendIndex = (int)Math.random()*populationSize;
          Person friend = people[friendIndex];
          currentPerson.addContact(friend);
-    
+      	// randomly generate an integer from 
+        //friendIndex = Math.random();
+        //== addContact;
        
       }
    }
@@ -58,7 +60,7 @@ public class Population  {
  * infected in the population.
  * @return int the number of infected people in the population.
  */
- public int numberInfected();
+ public int numberInfected()
  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
