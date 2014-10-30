@@ -4,6 +4,8 @@
 * @author Matthew Bardoe
 * @author Ben Birney
 * @author Yonghyun Lee
+* @author Taylor Rossini
+* @author Sonja Eliason
 * @version 0.1
 * @date 10/21/14
 */
