@@ -19,13 +19,16 @@ public class Population  {
       people[i]=new Person();
     }
   }
+ 
+ /**
+ * This method adds a person to the population
+ */
+ 
  /**
  * This method creates the acquaintances for all the
  * people in the population.
  */
- private void createAquaintances(){
-    
- }
+ private void createAquaintances();
 
  /**
  * This function returns the number of people that are 
