@@ -12,21 +12,13 @@ public class Person  {
 	private boolean isAlive;
 	private boolean isRecovered;
 	private Virus[] virus; 
-	private Person[] contacts;
-	private int numContacts;
-	public Person() {
+	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
+	
 	}
-	/**
-	* A setter method for the contacts  of a person.
-	* @param contacts an int describing the number of contacts a person has.
-	*/
-	public void setContacts(int contacts){
-		numContacts=contacts; 
-		Person[] contacts= new Person[contacts];
-	}
+	
 	/**
 	* A setter method for the infection status of a person.
 	* @param infected a boolean describing whether a person is infected.
@@ -88,7 +80,8 @@ public class Person  {
     	{
     		if (contact[i]==null)
     		{
-
+    			contact[i]=friend;
+    			break; 
     		}
     	}
     }
@@ -104,7 +97,7 @@ public class Person  {
     				(Math.floor(Math.random() * 100.0))*(spreadrate)
     				if (isInfected==true)
     				{
-
+    					(Math.floor(Math.))
     				}
     			} 
 
