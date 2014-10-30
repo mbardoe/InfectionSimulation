@@ -12,22 +12,16 @@ public class Person  {
 	private boolean isAlive;
 	private boolean isRecovered;
 	private Virus[] virus; 
-<<<<<<< HEAD
+
 	private Person[] contacts;
     private int numContacts;
 
-=======
->>>>>>> 061528a7f9ae4c0567aa8a7b47df397fba4b83af
 	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
 		isRecovered=true;
-<<<<<<< HEAD
         contacts=new Person[numContacts];
         this.numContacts=numContacts;
-=======
-	
->>>>>>> 061528a7f9ae4c0567aa8a7b47df397fba4b83af
 	}
 	
 	/**
@@ -91,13 +85,9 @@ public class Person  {
     	{
     		if (contact[i]==null)
     		{
-<<<<<<< HEAD
-    			contacts[i]=friend;
-                break;
-=======
+
     			contact[i]=friend;
     			break; 
->>>>>>> 061528a7f9ae4c0567aa8a7b47df397fba4b83af
     		}
     	}
     }
