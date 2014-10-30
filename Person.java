@@ -49,10 +49,6 @@ public class Person  {
 	{
 		this.isRecovered=recovered;
 	}
-	public void setDaysInfected (int day1, int day2)
-	{
-		daysInfected= day2 - day1;
-	}
 
 	/**
 	* A getter method for the infection status of person.
@@ -111,10 +107,12 @@ public class Person  {
     		{
     			if (contacts[i].susceptible()==true)
     			{
+
     				if (Math.random()<virus.getSpreadRate())
     				{
     					contacts[i].setInfected(true);
                         contacts[i].setVirus(virus);
+
     				}
     				
     			} 
