@@ -66,6 +66,10 @@ public class Person  {
     {
     	return isRecovered;
     }
+    /**
+	* A getter method for the living status of person.
+	* @return boolean indicating the living status of the person.
+	*/
     public boolean alive()
     {
     	return isAlive;
@@ -78,6 +82,10 @@ public class Person  {
     {
     	return numContacts;
     }
+    /**
+	* A getter method for the susceptible status of person.
+	* @return boolean indicating the whether or not the  person is susceptible.
+	*/
     public boolean susceptible()
     {
         return (isAlive)&&(!isInfected)&&(!isRecovered);
@@ -129,6 +137,7 @@ public class Person  {
     			} 
 
     		}
+
             daysInfected++;
             if (daysInfected>virus.getInfectiousDays())
             {
@@ -151,6 +160,7 @@ public class Person  {
     	}
 
     }
+
     	//Decide if a contact is susceptible by whether they are infected or not.
     	//Compare a random number to the spread rate.
     	//If person is infected track the number of days they have been infected.
