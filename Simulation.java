@@ -66,7 +66,7 @@ public class Simulation  {
 
 		double mortality;
 		do{
-			System.out.print("Please enter the duration of the virus: ");
+			System.out.print("Please enter the mortality of the virus: ");
 			mortality = kb.nextDouble();
 			if (duration>=0) break;
 			System.out.println("Input doesn't make sense in this context!");
