@@ -89,7 +89,7 @@ public class Simulation  {
 		// return a string of the current population's state
 	}
 
-	public void writeToFile(String output, String filename);
+	public void writeToFile(String output, String filename) {
 		// Will report out results
 
 		// Consider having the ability to write the results of the simulation
@@ -104,7 +104,7 @@ public class Simulation  {
 			System.out.println("Encountered an error writing output.");
 			System.err.format("IOException: %s%n", x);
 		}*/
-		
+
 	}
 
 	/**
