@@ -2,17 +2,17 @@
 * The main class of a SIR Simulation with discrete aspects to it.
 * This class will run the simulation and be the "time keeper" for the
 * application.
-* @param author Patrick K.
-* @param author Alex Z.
-* @param author Ben O.
+* @author Patrick K.
+* @author Alex Z.
+* @author Ben O.
 */
 
-import java.nio.file;
+
 import java.util.Scanner;
 
 public class Simulation  {
 
-
+	public int tick;
 	public void configure()
 	{
 		// Use a scanner to get the information necessary to start the sim
