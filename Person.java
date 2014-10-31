@@ -96,6 +96,7 @@ public class Person  {
     }
     /** 
     * A setter method for the virus.
+    * @param virus a Virus class describing the type of virus. 
     */
     public void setVirus(Virus virus)
     {
