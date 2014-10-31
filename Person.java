@@ -12,7 +12,7 @@ public class Person  {
 	private boolean isAlive;
 	private boolean isRecovered;
 	private Virus virus; 
-
+    private int daysInfected;
 	private Person[] contacts;
     private int numContacts;
 
@@ -49,24 +49,20 @@ public class Person  {
 	{
 		this.isRecovered=recovered;
 	}
-	public void setDaysInfected (int day1, int day2)
-	{
-		daysInfected= day2 - day1;
-	}
 
 	/**
 	* A getter method for the infection status of person.
 	* @return boolean indicating the infection state of the person.
 	*/
-	public bool infected()
+	public boolean infected()
 	{
 		return isInfected;
 	}
-    public bool recovered()
+    public boolean recovered()
     {
     	return isRecovered;
     }
-    public bool alive()
+    public boolean alive()
     {
     	return isAlive;
     }
@@ -74,8 +70,19 @@ public class Person  {
     {
     	return numContacts;
     }
+    public boolean susceptible()
+    {
+        return (isAlive)&&(!isInfected)&&(!isRecovered);
+    }
+    /** 
+    * A setter method for the virus.
+    */
+    public void setVirus(Virus virus)
+    {
+        this.virus=virus;
+    }
 
-    public Person getContacts()
+    public Person[] getContacts()
     {
     	return contacts;
     }
@@ -83,10 +90,10 @@ public class Person  {
     {
     	for (int i =0; i<contacts.length; i++)
     	{
-    		if (contact[i]==null)
+    		if (contacts[i]==null)
     		{
 
-    			contact[i]=friend;
+    			contacts[i]=friend;
     			break; 
     		}
     	}
@@ -98,25 +105,43 @@ public class Person  {
     	{
     		for (int i=0; i<contacts.length; i++)
     		{
-    			if (contact[i].susceptible==true)
+    			if (contacts[i].susceptible()==true)
     			{
-    				(Math.floor(Math.random() * 100.0))*(spreadrate)=//some number
-    				if (/*some number*/<)
+
+    				if (Math.random()<virus.getSpreadRate())
     				{
-    					if (isInfected==true)
-    					{
-    					(Math.floor(Math.))
-    					}
+    					contacts[i].setInfected(true);
+                        contacts[i].setVirus(virus);
+
     				}
     				
     			} 
 
     		}
-    		daysInfected++;
-    		if (daysInfected>virus.getInfectiousDays)
 
+            daysInfected++;
+            if (daysInfected>virus.getInfectiousDays())
+            {
+                if(Math.random()<virus.getDeathRate())
+                {
+                    //He died
+                    setInfected(false);
+                    setAlive(false);
+                    setRecovered(false);
+                }
+                else
+                {
+                    // he Lived!
+                    setInfected(false);
+                    setAlive(true);
+                    setRecovered(true);
+                }
+            }
 
-    	
+    	}
+
+    }
+
     	//Decide if a contact is susceptible by whether they are infected or not.
     	//Compare a random number to the spread rate.
     	//If person is infected track the number of days they have been infected.
@@ -129,9 +154,8 @@ public class Person  {
 	* of this class.
 	*/
 	public static void main(String[] args){
-		Person person = new Person();
-		System.out.println(person.susceptible());
-		Person friend = new Person();
+		Person person = new Person(5);
+		Person friend = new Person(5);
 		person.addContact(friend);
 		System.out.println(person.getNumContacts());
 		System.out.println(person.getContacts());
