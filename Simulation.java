@@ -89,7 +89,7 @@ public class Simulation  {
 		// return a string of the current population's state
 	}
 
-	public void writeToFile(output, filename);
+	public void writeToFile(String output, String filename);
 		// Will report out results
 
 		// Consider having the ability to write the results of the simulation
