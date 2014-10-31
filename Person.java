@@ -11,7 +11,7 @@ public class Person  {
 	private boolean isInfected;
 	private boolean isAlive;
 	private boolean isRecovered;
-	private Virus[] virus; 
+	private Virus virus; 
 
 	private Person[] contacts;
     private int numContacts;
@@ -112,6 +112,10 @@ public class Person  {
     			} 
 
     		}
+    		daysInfected++;
+    		if (daysInfected>virus.getInfectiousDays)
+
+
     	
     	//Decide if a contact is susceptible by whether they are infected or not.
     	//Compare a random number to the spread rate.
