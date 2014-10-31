@@ -46,8 +46,8 @@ public class Population  {
      currentPerson = people[i];
        for (int j = 0; j<numContacts; j++)
         { 
-         int friendIndex = (int)Math.random()*populationSize;
-         Person friend = people[friendIndex];
+         friendIndex = (int)Math.random()*populationSize;
+         friend = people[friendIndex];
          currentPerson.addContact(friend);
         // randomly generate an integer from 
         //friendIndex = Math.random();
@@ -104,7 +104,7 @@ public class Population  {
 */
  public String toString()
  {
-              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected() + "Number Alive -" + this.numberAlive() + "Number Recovered -" + this.numberRecovered();
+              return "Population Size -" + this.populationSize + "Number Infected -" + this.numInfected() + "Number Alive -" + this.numAlive() + "Number Recovered -" + this.numRecovered();
  }
  public Person getPerson(int n)
 {
