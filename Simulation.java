@@ -83,10 +83,10 @@ public class Simulation  {
 	 * Generate a report of the simulation's current state
 	 */
 	public String generateReport() {
-		numberSick = pop.numInfected();
-		popsize = this.popsize;
-		percentageInfected = (double)numberSick/(double)popsize;
-		report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected;
+		int numberSick = pop.numInfected();
+		int popsize = this.popsize;
+		double percentageInfected = (double)numberSick/(double)popsize;
+		String report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected;
 		return report;
 		// return a string of the current population's state
 	}
