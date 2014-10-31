@@ -22,13 +22,8 @@ public class Simulation  {
 		//    * duration of infection time
 		//    * mortality rate for virus
 		Scanner kb = new Scanner(System.in);
-<<<<<<< HEAD
 		tick = 0;
-			// unbroke things
-=======
-
-    		// unbroke things
->>>>>>> 17f93b9a7b5dd74225022ee6d8dafc91671ae183
+		// unbroke things
 		int populationSize;
 		do {
 			System.out.print("Please enter a population size: ");
@@ -41,13 +36,8 @@ public class Simulation  {
 		int numContacts;
 		do {
 			System.out.print("Please enter population with the virus: ");
-<<<<<<< HEAD
 			numContacts = kb.nextInt();
 			if(numContacts < populationSize) break;
-=======
-			baseInfected = kb.nextInt();
-			if(baseInfected < populationSize)	break;
->>>>>>> 17f93b9a7b5dd74225022ee6d8dafc91671ae183
 			System.out.println("Input doesn't make sense in this context!");
 		} while(numContacts > populationSize);
 
@@ -59,7 +49,6 @@ public class Simulation  {
 			System.out.println("Input doesn't make sense in this context!");
 		} while(spreadrate < 0);
 
-<<<<<<< HEAD
 		int duration;
 		do{
 			System.out.print("Please enter the duration of the virus: ");
@@ -99,30 +88,20 @@ public class Simulation  {
 		return report;
 		// return a string of the current population's state
 	}
-=======
-		// this method will instantiate the Population and Virus classes
-		Population pop = new Population();
-		Virus virus = new Virus();
 
-		// Will have a loop that runs the simulation
-		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
-
-		}
->>>>>>> 17f93b9a7b5dd74225022ee6d8dafc91671ae183
-
+	public void writeToFile(output, filename);
 		// Will report out results
 
 		// Consider having the ability to write the results of the simulation
 		// to a file so that we can see the results in a spreadsheet.
 		Charset charset = Charset.forName("US-ASCII");
 		String output = "test output\n"; // NYI
-		try (BufferedWriter writer = Files.newBufferedWriter("postmortem.txt", charset)) {
+		try (BufferedWriter writer = Files.newBufferedWriter(filename, charset)) {
 			writer.write(output, 0, output.length());
 		} catch (IOException x) {
 			System.out.println("Encountered an error writing output.")
 			System.err.format("IOException: %s%n", x);
 		}
-<<<<<<< HEAD
 	}
 
 	/**
@@ -152,10 +131,7 @@ public class Simulation  {
 		}
 
 		// Will report out results
-		sim.writeToFile(out, "output.txt");
-
-=======
->>>>>>> 17f93b9a7b5dd74225022ee6d8dafc91671ae183
+		sim.writeToFile(out, "postmortem");
 
 	}
 }
