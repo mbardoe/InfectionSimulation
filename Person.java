@@ -163,11 +163,6 @@ public class Person  {
 
     }
 
-    	//Decide if a contact is susceptible by whether they are infected or not.
-    	//Compare a random number to the spread rate.
-    	//If person is infected track the number of days they have been infected.
-    	//If infected for enough days then compare random number to death rate to see if they are alive.
-    	//If infected for enough days then not infected anymore.
 
 
 	/**
