@@ -30,12 +30,12 @@ public class Population  {
     }
     this.numContacts=numContacts;
   }
- 
- 
- 
+
  /**
  * This method creates the acquaintances for all the
  * people in the population.
+ * @param int 
+ * this parameter gives the number of people a person has been in contact with and therefore potentially infected
  */
  private void createContacts(int numContacts)
  {
@@ -56,6 +56,7 @@ public class Population  {
       }
    }
 }
+
  /**
  * This function returns the number of people that are 
  * infected in the population.
@@ -73,12 +74,12 @@ public class Population  {
    }
    return numInfected;
  }
+ 
  /**
   * This function returns the number of people that are 
   * alive in the population.
   * @return int number of alive people in population
   */
-  
  public int numAlive()
   {
     int numAlive = 0;
