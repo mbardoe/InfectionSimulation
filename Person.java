@@ -112,6 +112,7 @@ public class Person  {
     }
     /**
     * A method for adding contacts to a person's contact list.
+    * @param friend a person who is in contact with the patient.
     */
 
     public void addContact(Person friend)

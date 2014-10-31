@@ -111,10 +111,12 @@ public class Population  {
 {
   return people[n];
 }
+ 
+/**
+ * A testing method for the class which creates a population of size 100 where everyone knows 5 other people
+ */
  public static void main(String[] args)
  {
-  // Create a population of size 1000 where everyone knows
-  // 5 other people.
   Population population = new Population(100,5);
   Person larry = population.getPerson(30);
   System.out.println(larry);
