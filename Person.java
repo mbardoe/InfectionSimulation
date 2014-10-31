@@ -62,6 +62,10 @@ public class Person  {
     {
     	return isRecovered;
     }
+    /**
+	* A getter method for the living status of person.
+	* @return boolean indicating the living status of the person.
+	*/
     public boolean alive()
     {
     	return isAlive;
@@ -70,6 +74,10 @@ public class Person  {
     {
     	return numContacts;
     }
+    /**
+	* A getter method for the susceptible status of person.
+	* @return boolean indicating the whether or not the  person is susceptible.
+	*/
     public boolean susceptible()
     {
         return (isAlive)&&(!isInfected)&&(!isRecovered);
