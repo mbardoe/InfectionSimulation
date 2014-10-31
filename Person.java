@@ -117,7 +117,9 @@ public class Person  {
     		}
     	}
     }
-
+    /**
+	* A  method for spreading the virus through the contacts of a person.
+	*/
     public void spreadVirus()
     {
     	if (isInfected==true)
