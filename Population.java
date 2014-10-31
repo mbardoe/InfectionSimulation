@@ -65,14 +65,19 @@ public class Population  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
    {
-   if (people[i].infected)
+   if (people[i].infected())
      {
        numInfected++;
      }
    }
    return numInfected;
  }
- 
+ /**
+  * This function returns the number of people that are 
+  * alive in the population.
+  * @return int number of alive people in population
+  */
+  
  public int numAlive()
   {
     int numAlive = 0;
@@ -83,6 +88,7 @@ public class Population  {
         numAlive++;
       }
     }
+    return numAlive;
   }
  
 /**
