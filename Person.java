@@ -2,7 +2,7 @@
 * This class is part of a simulation of the spread of a virus 
 * through a population. It uses the SIR model to
 * model the spread of virus through a population.
-* @author Ginny Nie
+* @author Ginny Nie, Charles, Singhei 
 * @version 0.1
 * 
 */
@@ -58,6 +58,10 @@ public class Person  {
 	{
 		return isInfected;
 	}
+	/**
+	* A getter method for the recovered status of person.
+	* @return boolean indicating the recovered state of the person.
+	*/
     public boolean recovered()
     {
     	return isRecovered;
@@ -66,6 +70,10 @@ public class Person  {
     {
     	return isAlive;
     }
+    /**
+	* A getter method for the number of contacts in person's contact array.
+	* @return int indicating the number  of contacts in the person's contact array. 
+	*/
     public int getNumContacts()
     {
     	return numContacts;
@@ -81,7 +89,10 @@ public class Person  {
     {
         this.virus=virus;
     }
-
+    /**
+	* A getter method for the contacts  of a person.
+	* @return array consisting of the contacts  of a person.
+	*/
     public Person[] getContacts()
     {
     	return contacts;
