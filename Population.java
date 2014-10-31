@@ -110,6 +110,9 @@ public class Population  {
     }
     return numRecovered;
   }
+  /**
+  * A method that tells each person in the population to spread the virus.
+  */
   public void spreadVirus()
   {
      for( int i = 0 ; i< populationSize ; i++)
@@ -133,7 +136,7 @@ public class Population  {
               return "Population Size -" + this.populationSize + "Number Infected -" + this.numInfected() + "Number Alive -" + this.numAlive() + "Number Recovered -" + this.numRecovered();
  }
  /**
-  * A method which 
+  * A method which returns the nth person of the population.
   * @param n an int which represents the number/place of the person within the people array
   * @return Person a selected person from the people array 
   */
