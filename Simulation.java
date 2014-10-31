@@ -14,7 +14,12 @@ public class Simulation  {
 	public Virus virus;
 	public Population pop;
 	public int tick, popsize;
+	private String out="";
+
+
+
 	public void configure()
+	
 	{
 		// Use a scanner to get the information necessary to start the sim
 		// We will need:
@@ -73,7 +78,7 @@ public class Simulation  {
 	 * Run through one day of simulating
 	 */
 	public void tick() {
-		pop.tickSimulation();
+		pop.spreadVirus();
 		System.out.println("Duration so far: " + tick);
 		tick++;
 		// single tick of the simulation
@@ -108,6 +113,15 @@ public class Simulation  {
 		}*/
 
 	}
+	public void run()
+	{
+		// final loop that goes until the infection has run its course.
+		while((pop.numInfected() != 0 ) && ( pop.numAlive() >= 0 )) {
+			this.tick();
+			System.out.println(this.generateReport());
+			this.out += this.generateReport();
+		}
+	}
 
 	/**
 	 * Application entry point
@@ -127,17 +141,12 @@ public class Simulation  {
 		// this method will instantiate the Population and Virus classes
 		Simulation sim = new Simulation();
 		sim.configure();
-
-		String out = "";
-		// final loop that goes until the infection has run its course.
-		while((pop.numberInfected() != 0 ) && ( pop.numberAlive() >= 0 )) {
-			sim.tick();
-			System.out.println(sim.generateReport());
-			out += sim.generateReport();
-		}
+		sim.run();
+		//String out = "";
+		
 
 		// Will report out results
-		sim.writeToFile(out, "postmortem");
+		//sim.writeToFile(out, "postmortem");
 
 	}
 }
