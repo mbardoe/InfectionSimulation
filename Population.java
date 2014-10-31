@@ -6,6 +6,7 @@
 * @author Yonghyun Lee
 * @author Taylor Rossini
 * @author Sonja Eliason
+* @author Channy Hong
 * @version 0.1
 * @date 10/21/14
 */
@@ -29,11 +30,12 @@ public class Population  {
     }
     this.numContacts=numContacts;
   }
- 
+
  /**
- * Method creates contacts for each person in the people array
- * @param numContacts an int that indicates the number of contacts each member of the population will have
+ * This method creates the acquaintances for all the
  * people in the population.
+ * @param int 
+ * this parameter gives the number of people a person has been in contact with and therefore potentially infected
  */
  private void createContacts(int numContacts)
  {
@@ -44,8 +46,8 @@ public class Population  {
      currentPerson = people[i];
        for (int j = 0; j<numContacts; j++)
         { 
-         int friendIndex = (int)Math.random()*populationSize;
-         Person friend = people[friendIndex];
+         friendIndex = (int)Math.random()*populationSize;
+         friend = people[friendIndex];
          currentPerson.addContact(friend);
         // randomly generate an integer from 
         //friendIndex = Math.random();
@@ -56,20 +58,58 @@ public class Population  {
 }
 
  /**
- * This function returns the number of people that are infected in the population.
- * @return numInfected and int that represents  the amount o people in the population who are infected
+ * This function returns the number of people that are 
+ * infected in the population.
+ * @return int the number of infected people in the population.
  */
- public int numberInfected()
+ public int numInfected()
  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
    {
+   if (people[i].infected())
      {
        numInfected++;
      }
    }
    return numInfected;
  }
+ 
+ /**
+  * This function returns the number of people that are 
+  * alive in the population.
+  * @return int number of alive people in population
+  */
+ public int numAlive()
+  {
+    int numAlive = 0;
+   for( int i = 0 ; i< populationSize ; i++)
+    {
+      if (people[i].alive())
+      {
+        numAlive++;
+      }
+    }
+    return numAlive;
+  }
+  
+   /**
+  * This function returns the number of people that are 
+  * recovered in the population.
+  * @return int number of recovered people in population
+  */
+  public int numRecovered()
+  {
+    int numRecovered = 0;
+   for( int i = 0 ; i< populationSize ; i++)
+    {
+      if (people[i].recovered())
+      {
+        numRecovered++;
+      }
+    }
+    return numRecovered;
+  }
  
 /**
 * A method to create a string that reports out
@@ -83,12 +123,23 @@ public class Population  {
 */
  public String toString()
  {
-              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected() + "Number Alive -" + this.numberAlive() + "Number Recovered -" + this.numberRecovered();
+              return "Population Size -" + this.populationSize + "Number Infected -" + this.numInfected() + "Number Alive -" + this.numAlive() + "Number Recovered -" + this.numRecovered();
  }
+ /**
+  * A method which 
+  * @param n an int which represents the number/place of the person within the people array
+  * @return Person a selected person from the people array 
+  */
+ public Person getPerson(int n)
+{
+  return people[n];
+}
+ 
+/**
+ * A testing method for the class which creates a population of size 100 where everyone knows 5 other people
+ */
  public static void main(String[] args)
  {
-  // Create a population of size 1000 where everyone knows
-  // 5 other people.
   Population population = new Population(100,5);
   Person larry = population.getPerson(30);
   System.out.println(larry);

@@ -16,6 +16,10 @@ public class Person  {
 	private Person[] contacts;
     private int numContacts;
 
+    /**
+	* A intance method for person class.
+	*@param numContacts a int giving the number of contacts the contact array can hold.
+	*/
 	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
@@ -92,6 +96,7 @@ public class Person  {
     }
     /** 
     * A setter method for the virus.
+    * @param virus a Virus class describing the type of virus. 
     */
     public void setVirus(Virus virus)
     {
@@ -105,6 +110,11 @@ public class Person  {
     {
     	return contacts;
     }
+    /**
+    * A method for adding contacts to a person's contact list.
+    * @param friend a person who is in contact with the patient.
+    */
+
     public void addContact(Person friend)
     {
     	for (int i =0; i<contacts.length; i++)
@@ -152,7 +162,7 @@ public class Person  {
                 }
                 else
                 {
-                    // he Lived!
+                    // He lived!
                     setInfected(false);
                     setAlive(true);
                     setRecovered(true);
@@ -163,11 +173,6 @@ public class Person  {
 
     }
 
-    	//Decide if a contact is susceptible by whether they are infected or not.
-    	//Compare a random number to the spread rate.
-    	//If person is infected track the number of days they have been infected.
-    	//If infected for enough days then compare random number to death rate to see if they are alive.
-    	//If infected for enough days then not infected anymore.
 
 
 	/**
