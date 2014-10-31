@@ -8,11 +8,12 @@
 */
 
 import java.nio.file;
+import java.util.Scanner;
 
 public class Simulation  {
 
 
-	public static void main(String[] args)
+	public void configure()
 	{
 		// Use a scanner to get the information necessary to start the sim
 		// We will need:
@@ -91,12 +92,12 @@ public class Simulation  {
 
 	public void writeToFile(String output, String filename) {
 		// Will report out results
-
+		/*
 		// Consider having the ability to write the results of the simulation
 		// to a file so that we can see the results in a spreadsheet.
 		Charset charset = Charset.forName("US-ASCII");
 		String output = "test output\n"; // NYI
-		/*
+
 		try  {
 			BufferedWriter writer = Files.newBufferedWriter(filename, charset);
 			writer.write(output, 0, output.length());
