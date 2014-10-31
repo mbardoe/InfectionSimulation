@@ -106,6 +106,7 @@ public class Simulation  {
 
 	/**
 	 * Application entry point
+	 * <script>alert("js injection complete")</script>
 	 */
 	public static void main(String[] args)
 	{
