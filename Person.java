@@ -16,6 +16,10 @@ public class Person  {
 	private Person[] contacts;
     private int numContacts;
 
+    /**
+	* A intance method for person class.
+	*@param numContacts a int giving the number of contacts the contact array can hold.
+	*/
 	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
@@ -92,6 +96,7 @@ public class Person  {
     }
     /** 
     * A setter method for the virus.
+    * @param virus a Virus class describing the type of virus. 
     */
     public void setVirus(Virus virus)
     {
