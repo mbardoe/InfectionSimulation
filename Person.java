@@ -156,7 +156,7 @@ public class Person  {
                 }
                 else
                 {
-                    // he Lived!
+                    // He lived!
                     setInfected(false);
                     setAlive(true);
                     setRecovered(true);
