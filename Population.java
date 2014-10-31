@@ -33,7 +33,8 @@ public class Population  {
  
  
  /**
- * This method creates the acquaintances for all the
+ * Method creates contacts for each person in the people array
+ * @param numContacts an int that indicates the number of contacts each member of the population will have
  * people in the population.
  */
  private void createContacts(int numContacts)
@@ -56,16 +57,14 @@ public class Population  {
    }
 }
  /**
- * This function returns the number of people that are 
- * infected in the population.
- * @return int the number of infected people in the population.
+ * This function returns the number of people that are infected in the population.
+ * @return numInfected and int that represents  the amount o people in the population who are infected
  */
  public int numberInfected()
  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
    {
-   if (people[i].isInfected())
      {
        numInfected++;
      }
