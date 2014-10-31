@@ -110,6 +110,13 @@ public class Population  {
     }
     return numRecovered;
   }
+  public void spreadVirus()
+  {
+     for( int i = 0 ; i< populationSize ; i++)
+    {
+      people[i].spreadVirus();
+    }
+  }
  
 /**
 * A method to create a string that reports out
