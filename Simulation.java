@@ -11,8 +11,9 @@
 import java.util.Scanner;
 
 public class Simulation  {
-
-	public int tick;
+	public Virus virus;
+	public Population pop;
+	public int tick, popsize;
 	public void configure()
 	{
 		// Use a scanner to get the information necessary to start the sim
@@ -31,7 +32,7 @@ public class Simulation  {
 			populationSize = kb.nextInt();
 			if(populationSize >= 0) break;
 			System.out.println("Input doesn't make sense in this context!");
-		} while(PopulationSize < 0);
+		} while(populationSize < 0);
 		this.popsize = populationSize;
 
 		int numContacts;
@@ -82,8 +83,8 @@ public class Simulation  {
 	 * Generate a report of the simulation's current state
 	 */
 	public String generateReport() {
-		numberSick = pop.getNumberInfected();
-		popsize = pop.getPopulationSize();
+		numberSick = pop.numInfected();
+		popsize = this.popsize;
 		percentageInfected = (double)numberSick/(double)popsize;
 		report = "number sick: "+numberSick +", populationSize: "+ popsize + "percentage infected: "+ percentageInfected;
 		return report;
