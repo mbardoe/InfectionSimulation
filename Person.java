@@ -105,6 +105,10 @@ public class Person  {
     {
     	return contacts;
     }
+    /**
+    * A method for adding contacts to a person's contact list.
+    */
+
     public void addContact(Person friend)
     {
     	for (int i =0; i<contacts.length; i++)
