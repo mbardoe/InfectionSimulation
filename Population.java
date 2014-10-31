@@ -30,12 +30,12 @@ public class Population  {
     }
     this.numContacts=numContacts;
   }
- 
- 
- 
+
  /**
  * This method creates the acquaintances for all the
  * people in the population.
+ * @param int 
+ * this parameter gives the number of people a person has been in contact with and therefore potentially infected
  */
  private void createContacts(int numContacts)
  {
@@ -46,8 +46,8 @@ public class Population  {
      currentPerson = people[i];
        for (int j = 0; j<numContacts; j++)
         { 
-         int friendIndex = (int)Math.random()*populationSize;
-         Person friend = people[friendIndex];
+         friendIndex = (int)Math.random()*populationSize;
+         friend = people[friendIndex];
          currentPerson.addContact(friend);
         // randomly generate an integer from 
         //friendIndex = Math.random();
@@ -56,6 +56,7 @@ public class Population  {
       }
    }
 }
+
  /**
  * This function returns the number of people that are 
  * infected in the population.
@@ -73,12 +74,12 @@ public class Population  {
    }
    return numInfected;
  }
+ 
  /**
   * This function returns the number of people that are 
   * alive in the population.
   * @return int number of alive people in population
   */
-  
  public int numAlive()
   {
     int numAlive = 0;
@@ -104,14 +105,8 @@ public class Population  {
 */
  public String toString()
  {
-              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected() + "Number Alive -" + this.numberAlive() + "Number Recovered -" + this.numberRecovered();
+              return "Population Size -" + this.populationSize + "Number Infected -" + this.numInfected() + "Number Alive -" + this.numAlive() + "Number Recovered -" + this.numRecovered();
  }
- /**
-  * A method which 
-  * @param n an int which represents the number/place of the person within the people array
-  * @return Person a selected person from the people array 
-  */
- 
  public Person getPerson(int n)
 {
   return people[n];
