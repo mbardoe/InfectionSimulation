@@ -125,6 +125,11 @@ public class Population  {
  {
               return "Population Size -" + this.populationSize + "Number Infected -" + this.numInfected() + "Number Alive -" + this.numAlive() + "Number Recovered -" + this.numRecovered();
  }
+ /**
+  * A method which 
+  * @param n an int which represents the number/place of the person within the people array
+  * @return Person a selected person from the people array 
+  */
  public Person getPerson(int n)
 {
   return people[n];
