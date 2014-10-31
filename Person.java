@@ -18,6 +18,7 @@ public class Person  {
 
     /**
 	* A intance method for person class.
+	*@param numContacts a int giving the number of contacts the contact array can hold.
 	*/
 	public Person(int numContacts) {
 		isInfected=false;
