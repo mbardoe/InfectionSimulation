@@ -126,6 +126,7 @@ public class Person  {
     			} 
 
     		}
+
             daysInfected++;
             if (daysInfected>virus.getInfectiousDays())
             {
@@ -148,6 +149,7 @@ public class Person  {
     	}
 
     }
+
     	//Decide if a contact is susceptible by whether they are infected or not.
     	//Compare a random number to the spread rate.
     	//If person is infected track the number of days they have been infected.

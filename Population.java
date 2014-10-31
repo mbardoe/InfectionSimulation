@@ -60,18 +60,31 @@ public class Population  {
  * infected in the population.
  * @return int the number of infected people in the population.
  */
- public int numberInfected()
+ public int numInfected()
  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
    {
-   if (people[i].isInfected())
+   if (people[i].infected)
      {
        numInfected++;
      }
    }
    return numInfected;
  }
+ 
+ public int numAlive()
+  {
+    int numAlive = 0;
+   for( int i = 0 ; i< populationSize ; i++)
+    {
+      if (people[i].alive())
+      {
+        numAlive++;
+      }
+    }
+  }
+ 
 /**
 * A method to create a string that reports out
 *   <ul>
