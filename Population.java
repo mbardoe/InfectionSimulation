@@ -104,7 +104,7 @@ public class Population  {
 */
  public String toString()
  {
-              return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected() + "Number Alive -" + this.numberAlive() + "Number Recovered -" + this.numberRecovered();
+              return "Population Size -" + this.populationSize + "Number Infected -" + this.numInfected() + "Number Alive -" + this.numAlive() + "Number Recovered -" + this.numRecovered();
  }
  public Person getPerson(int n)
 {
