@@ -30,8 +30,6 @@ public class Population  {
     this.numContacts=numContacts;
   }
  
- 
- 
  /**
  * Method creates contacts for each person in the people array
  * @param numContacts an int that indicates the number of contacts each member of the population will have
@@ -56,6 +54,7 @@ public class Population  {
       }
    }
 }
+
  /**
  * This function returns the number of people that are infected in the population.
  * @return numInfected and int that represents  the amount o people in the population who are infected
@@ -71,6 +70,7 @@ public class Population  {
    }
    return numInfected;
  }
+ 
 /**
 * A method to create a string that reports out
 *   <ul>
