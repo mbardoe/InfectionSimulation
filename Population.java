@@ -6,6 +6,7 @@
 * @author Yonghyun Lee
 * @author Taylor Rossini
 * @author Sonja Eliason
+* @author Channy Hong
 * @version 0.1
 * @date 10/21/14
 */
@@ -30,9 +31,10 @@ public class Population  {
     this.numContacts=numContacts;
   }
  
+ 
+ 
  /**
- * Method creates contacts for each person in the people array
- * @param numContacts an int that indicates the number of contacts each member of the population will have
+ * This method creates the acquaintances for all the
  * people in the population.
  */
  private void createContacts(int numContacts)
@@ -54,22 +56,41 @@ public class Population  {
       }
    }
 }
-
  /**
- * This function returns the number of people that are infected in the population.
- * @return numInfected and int that represents  the amount o people in the population who are infected
+ * This function returns the number of people that are 
+ * infected in the population.
+ * @return int the number of infected people in the population.
  */
- public int numberInfected()
+ public int numInfected()
  {
    int numInfected = 0;
    for( int i = 0 ; i< populationSize ; i++)
    {
+   if (people[i].infected())
      {
        numInfected++;
      }
    }
    return numInfected;
  }
+ /**
+  * This function returns the number of people that are 
+  * alive in the population.
+  * @return int number of alive people in population
+  */
+  
+ public int numAlive()
+  {
+    int numAlive = 0;
+   for( int i = 0 ; i< populationSize ; i++)
+    {
+      if (people[i].alive())
+      {
+        numAlive++;
+      }
+    }
+    return numAlive;
+  }
  
 /**
 * A method to create a string that reports out
@@ -85,6 +106,10 @@ public class Population  {
  {
               return "Population Size -" + this.populationSize + "Number Infected -" + this.numberInfected() + "Number Alive -" + this.numberAlive() + "Number Recovered -" + this.numberRecovered();
  }
+ public Person getPerson(int n)
+{
+  return people[n];
+}
  public static void main(String[] args)
  {
   // Create a population of size 1000 where everyone knows
