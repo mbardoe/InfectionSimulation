@@ -36,6 +36,8 @@ public class Population  {
  /**
  * This method creates the acquaintances for all the
  * people in the population.
+ * @param int 
+ * this parameter gives the number of people a person has been in contact with and therefore potentially infected
  */
  private void createContacts(int numContacts)
  {
@@ -90,24 +92,6 @@ public class Population  {
       }
     }
     return numAlive;
-  }
-  
-  /**
-  * This function returns the number of people that are 
-  * recovered in the population.
-  * @return int number of recovered people in population
-  */
-  public int numRecovered()
-  {
-   int numRecovered = 0;
-   for( int i = 0 ; i< populationSize ; i++)
-    {
-      if (people[i].alive())
-      {
-        numRecovered++;
-      }
-    }
-    return numRecovered;
   }
  
 /**
