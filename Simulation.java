@@ -96,13 +96,15 @@ public class Simulation  {
 		// to a file so that we can see the results in a spreadsheet.
 		Charset charset = Charset.forName("US-ASCII");
 		String output = "test output\n"; // NYI
+		/*
 		try  {
 			BufferedWriter writer = Files.newBufferedWriter(filename, charset);
 			writer.write(output, 0, output.length());
 		} catch (IOException x) {
 			System.out.println("Encountered an error writing output.");
 			System.err.format("IOException: %s%n", x);
-		}
+		}*/
+		
 	}
 
 	/**
