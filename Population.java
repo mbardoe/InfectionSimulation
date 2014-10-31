@@ -91,6 +91,24 @@ public class Population  {
     }
     return numAlive;
   }
+  
+  /**
+  * This function returns the number of people that are 
+  * recovered in the population.
+  * @return int number of recovered people in population
+  */
+  public int numRecovered()
+  {
+   int numRecovered = 0;
+   for( int i = 0 ; i< populationSize ; i++)
+    {
+      if (people[i].alive())
+      {
+        numRecovered++;
+      }
+    }
+    return numRecovered;
+  }
  
 /**
 * A method to create a string that reports out
