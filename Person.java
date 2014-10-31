@@ -16,6 +16,9 @@ public class Person  {
 	private Person[] contacts;
     private int numContacts;
 
+    /**
+	* A intance method for person class.
+	*/
 	public Person(int numContacts) {
 		isInfected=false;
 		isAlive=true;
